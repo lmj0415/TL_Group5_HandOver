@@ -9,7 +9,7 @@ Initial Setup:
 
     4. type "npm install" in cmd to install all dependencies
 
-    5. start the project by typing "npm run dev" in cmd
+    5. start the project by typing "npm run dev" in cmd -> you can now access the   website under "localhost:5000" at any browser
     6. press STRG + C twice to end 
 
 
