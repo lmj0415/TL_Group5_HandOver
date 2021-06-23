@@ -2,10 +2,10 @@
 Initial Setup:
   First timer you download this repository pleas make sure you have node an npm installed, then install dependencies:
     0. check if you already have node.js by typing "node -v" in cmd
-    1. install node.js from https://nodejs.org/en/download/
+    1. install node.js from https://nodejs.org/en/download/ if not already installed
 
-    2.check if you already installed npm by typing "npm -v" in cmd
-    3. install npm by typing "node install npm -g" in cmd
+    2. check if you already installed npm by typing "npm -v" in cmd
+    3. install npm by typing "node install npm -g" in cmd if not already installed
 
     4. type "npm install" in cmd to install all dependencies
 
@@ -14,6 +14,8 @@ Initial Setup:
 
 
 Git Commands:
+  git clone https://github.com/LasseJantsch/TL_Group5_HandOver.git
+
   git add file_you_want_to_add -> Adds changes of that file to next commit
   git status -> checks status of commit, what changes are added
   git commit -m "my commit message" -> committing changes to local repository

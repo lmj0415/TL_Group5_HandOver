@@ -1,7 +1,6 @@
 require("dotenv").config() // require .env module
 const express = require("express");
 const app = express();
-const hoganMiddleware = require("hogan-middleware");
 const path = require("path")
 
 
@@ -10,14 +9,12 @@ const path = require("path")
 
 
 //set views,
-app.set("views", path.join(__dirname, "views"))
-app.set("view engine", "mustache")
-app.engine("mustache", hoganMiddleware.__express)
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jsx');
+app.engine('jsx', require('express-react-views').createEngine());
 
 //set static assets
 app.use(express.static(__dirname + "/public"))
-
-
 
 
 
