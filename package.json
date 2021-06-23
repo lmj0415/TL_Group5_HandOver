@@ -1,0 +1,27 @@
+{
+  "name": "tl_group5_handover",
+  "version": "1.0.0",
+  "description": "Git Commands:\r   git add file_you_want_to_add -> Adds changes of that file to next commit",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LasseJantsch/TL_Group5_HandOver.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LasseJantsch/TL_Group5_HandOver/issues"
+  },
+  "homepage": "https://github.com/LasseJantsch/TL_Group5_HandOver#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "hogan-middleware": "^0.2.2",
+    "jquery": "^3.6.0",
+    "nodemon": "^2.0.7"
+  }
+}
