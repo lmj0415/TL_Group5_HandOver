@@ -2,7 +2,6 @@ require("dotenv").config() // require .env module
 const express = require("express");
 const path = require("path")
 const mongoose = require("mongoose")
-const Storie = require("./models/stories.js")
 
 //express app
 const app = express();
