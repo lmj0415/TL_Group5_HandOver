@@ -22,6 +22,8 @@
     "express": "^4.17.1",
     "express-react-views": "^0.11.0",
     "jquery": "^3.6.0",
+    "mongodb": "^3.6.8",
+    "mongoose": "^5.12.14",
     "nodemon": "^2.0.7",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
