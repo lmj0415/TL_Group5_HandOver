@@ -27,7 +27,6 @@ class Stories extends Component {
 
         return(
             <div>
-                {/* <p>{this.state.stories}</p> */}
                 <ul>
                 {this.state.stories.map(item => (
                     <li key={item.id}>{item.title}</li>

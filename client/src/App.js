@@ -6,7 +6,7 @@ import Needy from './components/Needy'
 import Gastro from './components/Gastro'
 import Donator from './components/Donator'
 import Contact from './components/Contact'
-// import Stories from "./components/Stories"
+import Stories from "./components/Stories"
 
 
 class App extends Component{
@@ -20,6 +20,7 @@ class App extends Component{
           <Route path='/gastro' component={Gastro} />
           <Route path='/donator' component={Donator} />
           <Route path='/contact' component={Contact} />
+          <Route path="/stories" component = {Stories} /> 
         </div>
       </BrowserRouter>
     );
