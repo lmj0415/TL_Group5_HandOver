@@ -3,6 +3,8 @@ const express = require("express");
 const path = require("path")
 const mongoose = require("mongoose")
 const cors = require("cors")
+const bodyParser = require("body-parser")
+
 
 const api = require('./routes/api.js');
 
@@ -12,7 +14,8 @@ const app = express();
 
 //set api
 app.use(cors())
-app.use('/api/', api);
+app.use(bodyParser.json())
+app.use('/', api);
 
 
 //connect to MongoDB

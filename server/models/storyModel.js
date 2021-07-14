@@ -3,20 +3,8 @@ const Schema = mongoose.Schema;
 
 
 //define schema
-const storieSchema = new Schema({
-    Name: {
-        type: String,
-        require: true,
-    },
-    Subheading: {
-        type: String,
-        require: true,
-    },
-    Quote: {
-        type: String,
-        require: true,
-    },
-    Title: {
+const storySchema = new Schema({
+    title: {
         type: String,
         require: true,
     },
@@ -28,5 +16,4 @@ const storieSchema = new Schema({
 
 
 //define model
-const Story = mongoose.model("Storie", storieSchema);
-module.exports = Story;
+module.exports = mongoose.model("Story", storySchema);
