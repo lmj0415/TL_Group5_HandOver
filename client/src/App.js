@@ -1,32 +1,31 @@
 import React, {Component} from 'react'
-import Header from './components/Header'
-import Contact from './components/Contact'
+import Navbar from './components/Navbar'
 import { BrowserRouter, Route } from 'react-router-dom'
-
-import Stories from "./components/Stories"
+import Home from './components/Home'
+import Needy from './components/Needy'
+import Gastro from './components/Gastro'
+import Donator from './components/Donator'
+import Contact from './components/Contact'
+// import Stories from "./components/Stories"
 
 
 class App extends Component{
-
-  constructor() {
-    super()
-    this.state = {
-    }
-  }
-
-
   render() {
     return (
-    <BrowserRouter>
-      <div className='App'>
-          <Header title='Hand Over'/>
-          <Contact/>
-          <Stories />
-      </div>
-    </BrowserRouter> 
+      <BrowserRouter>
+        <div className="App">
+          <Navbar />
+          <Route exact path='/' component={Home} />
+          <Route path='/needy' component={Needy} />
+          <Route path='/gastro' component={Gastro} />
+          <Route path='/donator' component={Donator} />
+          <Route path='/contact' component={Contact} />
+        </div>
+      </BrowserRouter>
     );
   }
 }
+
 
 export default App;
 
