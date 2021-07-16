@@ -8,7 +8,7 @@ const storySchema = new Schema({
         type: String,
         require: true,
     },
-    body: {
+    name : {
         type: String,
         require: true,
     },
