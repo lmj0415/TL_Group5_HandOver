@@ -11,21 +11,24 @@ function CMSContainer(props) {
         <div className="cmsContainer" >
             <nav className= "cmsNav">
                 <Link to="/cms/stories">
-                    <div className="cmsNavE" name="stories" >
+                    <div className="cmsNavE" name="stories" onClick={props.handleNav}>
                         <h5>Stories</h5>
                     </div>
                 </Link>
                 <Link to="/cms/messages">
-                    <div className="cmsNavE" name="message" >
+                    <div className="cmsNavE" name="messages" onClick={props.handleNav}>
                         <h5>Messages</h5>
                     </div>
                 </Link>
             </nav>
                 <Switch>
                     <Route exact path="/cms/:table">
-                        <ShowTable data={props.data} />
+                        <ShowTable 
+                            data={props.tData.body} 
+                            methode={props.tData.methode}
+                            meta= {props.tData.meta} />
                     </Route>
-                    <Route path="/cms/:table/:methode"> 
+                    <Route path="/cms/:table/:methode">
                         <UseMethode data={props.data} />
                     </Route>
                 </Switch>

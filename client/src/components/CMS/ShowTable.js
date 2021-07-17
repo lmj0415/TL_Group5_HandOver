@@ -1,36 +1,45 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { useLocation } from 'react-router-dom'
+
+import TableElement from "./TableElement"
+
 
 function ShowTable(props) {
 
-    const methode = props.data.methode
-    const data = props.data.body
+  
+    
     
 
+    const TableHead = props.methode.map(element => {
+        if (element.tag === "<th>") {
+            return (<th className={element.className} >{element.name}</th>)
+        }
+    }) 
 
-    // const TableHead = methode.map(element => {
-    //     element ? console.log(element): null
-    // }) 
+    const TableBody = props.data.map(element => {
+        return(
+            <TableElement 
+                name={element.name} 
+                title={element.title}
+                date={element.date}
+                methode={props.methode} />)
+    })
+
+
 
     return(
         <div className="cmsContent">
-            <table style= {{marginLeft:150, width: 1600}}>
+            <div className="cmsHead">
+                <h4>{props.meta.title}s</h4>
+                <button className="btn waves-effect waves-light">New {props.meta.title}</button>
+            </div>
+            <table className= "cmsTable">
                     <thead>
                         <tr>
-                            <th>
-                                <button class="waves-effect waves-teal btn-flat">Title</button>
-                            </th>
-                            <th>
-                                <button class="waves-effect waves-teal btn-flat">Name</button>
-                            </th>
-                            <th>
-                                <button class="waves-effect waves-teal btn-flat">Date</button>
-                            </th>
+                            {TableHead}
                         </tr>
                     </thead>
                     <tbody>
-                        
+                        {TableBody}
                     </tbody>
                 </table>
         </div>

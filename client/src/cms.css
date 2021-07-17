@@ -32,8 +32,17 @@
     background-color: rgb(71, 71, 71)
 }
 
+.cmsHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 
 .cmsContent {
     width: 88%;
     height: 100%;
+
+    padding: 20px 40px;
 }
+
