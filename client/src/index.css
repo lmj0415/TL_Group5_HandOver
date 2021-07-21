@@ -110,3 +110,29 @@ footer {
   margin-top: 30px;
   text-align: center;
 } */
+
+nav a i {
+  color: black;
+  text-align: right;
+}
+
+nav ul a {
+  color: black;
+}
+
+.nav-wrapper {
+  background-color: whitesmoke;
+}
+
+.nav-wrapper .container img {
+  position: absolute;
+  top: 2px;
+  left: 10px;
+  width: 15%;
+  height: auto;
+}
+
+.Navbar .nav-wrapper .container {
+  overflow: hidden;
+  padding-left: 80px;
+}
