@@ -11,12 +11,12 @@ function CMSContainer(props) {
         <div className="cmsContainer" >
             <nav className= "cmsNav">
                 <Link to="/cms/stories">
-                    <div className="cmsNavE" name="stories" onClick={props.handleNav}>
+                    <div className="cmsNavE" id="stories" onClick={props.fetchTableData}>
                         <h5>Stories</h5>
                     </div>
                 </Link>
                 <Link to="/cms/messages">
-                    <div className="cmsNavE" name="messages" onClick={props.handleNav}>
+                    <div className="cmsNavE" id="messages" onClick={props.fetchTableData}>
                         <h5>Messages</h5>
                     </div>
                 </Link>

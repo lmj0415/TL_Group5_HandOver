@@ -46,3 +46,6 @@
     padding: 20px 40px;
 }
 
+h5 {
+    pointer-events: none;
+}

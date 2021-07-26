@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import { useParams } from "react-router"
+import callAPI from "./CmsApi"
 
 import CMSContainer from "./CMSContainer"
 
@@ -16,50 +16,57 @@ class CMS extends Component {
             stories: {
                 meta: {title: "Storie"},
                 methode: [
-                    {name:"name", tag: "<th>", className:"cmsTh"},
-                    {name:"title", tag: "<th>", className:"cmsTh"},
-                    {name:"date", tag: "<th>", className:"cmsTh"},
-                    {name:"edit", tag: "<button>", body: "Edit"},
-                    {name:"delete", tag: "<button>", body: "Delete"},
+                    {name:"Name", tag: "<th>", className:"cmsTh"},
+                    {name:"Title", tag: "<th>", className:"cmsTh"},
+                    {name:"Date", tag: "<th>", className:"cmsTh"},
+                    {name:"Edit", tag: "<button>", onClick: "edit"},
+                    {name:"Delete", tag: "<button>", onClick:" props.delete"},
     
                 ],
-                body: [
-                    {title: "this is my title", name: "this is my name", date: new Date("2021-05-12")},
-                    {title: "this is your title", name: "this is your name", date: new Date("2021-04-12")},
-                    {title: "this is our title", name: "this is our name", date: new Date("2021-03-12")},
-                ]
+                body: []
 
             },
 
             messages: {
                 meta: {title: "Message"},
                 methode: [
-                    {name:"name", tag: "<th>", className:"cmsTh"},
-                    {name:"title", tag: "<th>", className:"cmsTh"},
-                    {name:"date", tag: "<th>", className:"cmsTh"},
-                    {name:"edit", tag: "<button>", body: "Edit"},
-                    {name:"delete", tag: "<button>", body: "Delete"},
+                    {name:"Name", tag: "<th>", className:"cmsTh"},
+                    {name:"Title", tag: "<th>", className:"cmsTh"},
+                    {name:"Date", tag: "<th>", className:"cmsTh"},
+                    {name:"Message", tag: "<button>", onclick: "answer"},
+                    {name:"Delete", tag: "<button>", onclick: "delete"},
     
                 ],
-                body: [
-                    {title: "this is my title", name: "this is my name", date: new Date("2021-05-12")},
-                    {title: "this is your title", name: "this is your name", date: new Date("2021-04-12")},
-                    {title: "this is our title", name: "this is our name", date: new Date("2021-03-12")},
-                ]
+                body: []
 
             }
         }
 
-
+        this.fetchTableData = this.fetchTableData.bind(this)
+        this.callAPI = callAPI.bind(this)
     }
   
+    
+
+    fetchTableData(event) {
+        event.preventDefault()
+        const dataName= event.target.id
+
+        this.setState({
+            tData: this.state[dataName]
+            })
+
+        this.callAPI()
+    }
 
 
     render() {
 
         return(
             <CMSContainer 
-                tData={this.state.tData} />
+                tData={this.state.tData} 
+                fetchTableData={this.fetchTableData}
+                useMethode ={this.useMethode} />
 
                 
         )

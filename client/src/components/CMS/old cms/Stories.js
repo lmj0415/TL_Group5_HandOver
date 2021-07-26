@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 
-import StoryListElement from './StoryListElement'
-import StoryForm from './StoryForm'
+import StoryListElement from '../StoryListElement'
+import StoryForm from '../StoryForm'
 
 
 class Stories extends Component {

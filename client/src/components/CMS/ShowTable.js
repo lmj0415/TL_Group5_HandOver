@@ -1,6 +1,6 @@
 import React from "react"
+import {Link} from "react-router-dom"
 
-import TableElement from "./TableElement"
 
 
 function ShowTable(props) {
@@ -17,11 +17,18 @@ function ShowTable(props) {
 
     const TableBody = props.data.map(element => {
         return(
-            <TableElement 
-                name={element.name} 
-                title={element.title}
-                date={element.date}
-                methode={props.methode} />)
+            <tr>
+                <td >{element.title}</td>
+                <td>{element.name}</td>
+                <td>{element.createdAt.split('T')[0]}</td>
+                <td>
+                    <button className="btn waves-effect waves-light" name={element.id} onClick={element.editStory} >{props.methode[3].name}</button>
+                </td>
+                <td>
+                    <button className="btn waves-effect waves-light" name={element.id} onClick={element.deleteToDB} >{props.methode[4].name}</button>
+                </td>
+            </tr>
+        )
     })
 
 
@@ -29,8 +36,10 @@ function ShowTable(props) {
     return(
         <div className="cmsContent">
             <div className="cmsHead">
-                <h4>{props.meta.title}s</h4>
-                <button className="btn waves-effect waves-light">New {props.meta.title}</button>
+                <h2>{props.meta.title}s</h2>
+                <Link to={location => `${location.pathname}/new`}>
+                    <button className="btn waves-effect waves-light">New {props.meta.title} </button>
+                </Link>
             </div>
             <table className= "cmsTable">
                     <thead>

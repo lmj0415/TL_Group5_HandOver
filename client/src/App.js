@@ -6,7 +6,7 @@ import Needy from './components/Needy'
 import Gastro from './components/Gastro'
 import Donator from './components/Donator'
 import Contact from './components/Contact'
-import Stories from "./components/CMS/Stories"
+// import Stories from "./components/CMS/Stories"
 import CMS from "./components/CMS/CMSComponent"
 
 
@@ -21,8 +21,8 @@ class App extends Component{
           <Route path='/gastro' component={Gastro} />
           <Route path='/donator' component={Donator} />
           <Route path='/contact' component={Contact} />
-          <Route path="/stories" component = {Stories} /> 
-          {/* <Route path="/cms" component = {CMS} />  */}
+          {/* <Route path="/stories" component = {Stories} />  */}
+          <Route path="/cms" component = {CMS} /> 
         </div>
       </BrowserRouter>
     );
