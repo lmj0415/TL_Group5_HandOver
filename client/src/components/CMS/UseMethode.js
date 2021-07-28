@@ -2,19 +2,33 @@ import React from "react"
 
 function UseMethode(props) {
     
- 
-    return(
-        <form style= {{margin: 50, marginLeft: 600, width: 500}}>
-            <label>
-                {/* {props.pData.id? <h4>Edit Mode</h4>: <h4>New Post</h4>} */}
-                <input type="text" name="title" placeholder="Title" />
-                <input type="text" name="name" placeholder="Name" />
-            </label>
-            <button style={{marginRight: 20}} className="btn waves-effect waves-light" onClick={event=> event.preventDefault()}> Submit </button>
-        </form>
-    )
+    if (props.isLoading) {
+        return(
+            <div className="cmsHead">
+                <h2>Loading...</h2>
+            </div>) 
+    }else {
+
+        const input = props.fData.map(element => {
+            return(
+                <input type="text" name={element.name} placeholder={element.name} value={element.data} onChange ={props.handleChange} />
+            )
+        }) 
+
+        return(
+            <div>       
+
+                <div className="cmsHead">
+                    <h2>{props.meta.title}</h2>
+                </div>
+                <form style= {{marginLeft:150, width: 800}}>
+                    {input}
+                    <button style={{marginRight: 20}} className="btn waves-effect waves-light" onClick={event=> event.preventDefault()}> Submit </button>
+                </form>
+            </div>
+        )
         
-    
+    }
 }
 
 export default UseMethode

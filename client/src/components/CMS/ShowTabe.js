@@ -1,5 +1,5 @@
 import React from "react"
-//import {Link} from "react-router-dom"
+import {Link} from "react-router-dom"
 
 
 
@@ -18,7 +18,7 @@ if (props.isLoading) {
         <th key= {element.title}>
             <button className="waves-effect waves-teal btn-flat" name= {props.meta.tableName} id={element.name} onClick= {props.sortTable} >{element.title}</button>
         </th>)
-    })
+    }) 
 
     const tableBody = props.tData.map(element => {
         return(
@@ -27,7 +27,7 @@ if (props.isLoading) {
                 <td key={props.tBody[1].name} >{element[props.tBody[1].name]}</td>
                 <td key={props.tBody[2].name} >{element[props.tBody[2].name].split('T')[0]}</td>
                 <td key={props.tBody[3].name} > 
-                    <button className="btn waves-effect waves-light" name= {props.tBody[3].name} onClick={props.handleButton} >{props.tBody[3].title}</button>
+                    <button className="btn waves-effect waves-light" name= {props.tBody[3].name} id={element.id} onClick={props.handleButton} >{props.tBody[3].title}</button>
                 </td>
                 <td key={props.tBody[4].name} >
                     <button className="btn waves-effect waves-light" name={props.tBody[4].name} id={element._id} onClick={props.handleButton}  >{props.tBody[4].title}</button>
@@ -41,7 +41,9 @@ if (props.isLoading) {
 
             <div className="cmsHead">
                 <h2>{props.meta.title}</h2>
+                <Link to= {`/cms/${props.meta.name}s/new`}>
                     <button className="btn waves-effect waves-light" name= {"new"+ props.meta.name} onClick={props.handleButton} >New {props.meta.name}</button>
+                </Link>
             </div>
             <table style= {{marginLeft:150, width: 1200}}>
                 <thead>

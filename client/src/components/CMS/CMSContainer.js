@@ -51,8 +51,25 @@ function CMSContainer(props) {
                         handleButton= {props.handleButton}
                         />
                     </Route>
-                    <Route path="/cms/:table/:methode">
-                        <UseMethode  />
+                    <Route path="/cms/stories/new">
+                        <UseMethode  
+                        isLoading = {props.isLoading}
+                        meta = {props.sMethode.meta}
+
+                        fData = {props.fData}
+
+                        handleChange = {props.handleChange}
+                        />
+                    </Route>
+                    <Route path="/cms/messages/new">
+                        <UseMethode  
+                        isLoading = {props.isLoading}
+                        meta = {props.mMethode.meta}
+
+                        fData = {props.fData}
+                        
+                        handleChange = {props.handleChange}
+                        />
                     </Route>
                 </Switch>
             </div>

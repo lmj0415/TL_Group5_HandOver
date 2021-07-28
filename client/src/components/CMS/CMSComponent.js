@@ -11,8 +11,11 @@ class CMS extends Component {
             messagesData: [],
             messagesMethode: {},
 
-            formData: [],
-            formMethode: [],
+            formData: [
+                {name:"Title", data: ""},
+                {name:"Name", data:""}
+            ],
+
             isLoading: true,
             sortedBy: ""
         }
@@ -23,11 +26,13 @@ class CMS extends Component {
 
         this.sortTable = this.sortTable.bind(this)
         this.handleButton = this.handleButton.bind(this)
+        this.handleChange = this.handleChange.bind(this)
     }
 
 
 
     componentDidMount() {
+        this.setState({isLoadin: true})
         this.getStories()
         this.getMessages()
             
@@ -254,7 +259,7 @@ class CMS extends Component {
     }
 
     handleButton(event) {
-        event.preventDefault()
+       //event.preventDefault()
         const name = event.target.name
         const id = event.target.id
 
@@ -264,11 +269,27 @@ class CMS extends Component {
         if(name === "deleteMessages") {
             this.deletePost("messages", id)
         }
+        if(name==="editStories") {
+            this.setState()
+        }
     }
 
 
     //methode
-    handleChange() {}
+    handleChange(event) {
+        const {name, value} = event.target;
+        this.setState(prevState => ({
+            
+                formData: prevState.formData.map(element => {
+                    if(element.name === name) {
+                        element.data = value
+                        return element
+                    } return element
+                })
+            
+        }))
+    }
+    
 
     handleSubmit(){}
 
@@ -284,12 +305,12 @@ class CMS extends Component {
             mData= {this.state.messagesData}
             mMethode = {this.state.messagesMethode}
             fData = {this.state.formData}
-            fMethode = {this.state.formMethode}
 
             isLoading= {this.state.isLoading}
 
             sortTable = {this.sortTable}
             handleButton = {this.handleButton}
+            handleChange = {this.handleChange}
             />
 
                 
