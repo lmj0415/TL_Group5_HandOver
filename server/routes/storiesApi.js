@@ -10,11 +10,11 @@ router.get('/', (req, res) => res.send('API is working propperly'))
 router.get("/stories", async (req, res) => {
     try{
         const stories = await Story.find()
-        res.json(stories)
+       res.json(stories)
     }catch (err) {
         res.json({message: err})
     }
-})
+}) 
 
 router.post("/stories", async (req, res) =>{
     const story = new Story ( {

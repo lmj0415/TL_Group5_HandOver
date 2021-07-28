@@ -6,7 +6,9 @@ const cors = require("cors")
 const bodyParser = require("body-parser")
 
 
-const api = require('./routes/api.js');
+const storiesApi = require('./routes/storiesApi.js');
+const methodeApi = require("./routes/methodeApi");
+const cmsApi = require("./routes/cmsApi")
 
 //express app
 const app = express();
@@ -15,7 +17,10 @@ const app = express();
 //set api
 app.use(cors())
 app.use(bodyParser.json())
-app.use('/', api);
+app.use('/methode', methodeApi);
+app.use('/cms', cmsApi);
+app.use('/', storiesApi);
+
 
 
 //connect to MongoDB
