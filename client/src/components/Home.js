@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import Intro from '../Intro.jpg'
 import Gastro from '../Gastro.jpg'
 import Needy from '../Needy.jpg'
@@ -25,19 +26,25 @@ const Home = () => {
             
             <div className="Target-Groups">
                 <div className="Target-Group-1">
-                    <img src={Gastro} alt="Woman in backer shop"/>
-                    <h3 className="Title-Group-1">Gastro</h3>
-                    <button className="btn-1"> Mehr erfahren</button>
+                    <Link to="/gastro">
+                        <img src={Gastro} alt="Woman in backer shop"/>
+                        <h3 className="Title-Group-1">Gastro</h3>
+                        <button className="btn-1"> Mehr erfahren</button>
+                    </Link>
                 </div>
                 <div className="Target-Group-2">
-                    <img src={Donator} alt="Money in hands"/>
-                    <h3 className="Title-Group-2">Donator</h3>
-                    <button className="btn-2"> Mehr erfahren</button>
+                    <Link to="/donator">
+                        <img src={Donator} alt="Money in hands"/>
+                        <h3 className="Title-Group-2">Donator</h3>
+                        <button className="btn-2"> Mehr erfahren</button>
+                    </Link>
                 </div>
                 <div className="Target-Group-3">
-                    <img src={Needy} alt="Homeless on the streets"/>
-                    <h3 className="Title-Group-3">Needy</h3>
-                    <button className="btn-3"> Mehr erfahren</button>
+                    <Link to="/needy">
+                        <img src={Needy} alt="Homeless on the streets"/>
+                        <h3 className="Title-Group-3">Needy</h3>
+                        <button className="btn-3"> Mehr erfahren</button>
+                    </Link>
                 </div>
             </div>
 

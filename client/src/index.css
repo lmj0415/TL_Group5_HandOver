@@ -320,10 +320,20 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .Text-Element p {
   padding-left: 5px;
-  padding-top: 10px;
+  padding-top: 5px;
   margin-bottom: 2px;
   text-align: left;
   font-weight: bold;
+}
+.Text-Element .italic {
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-right: 50px;
+  margin-bottom: 2px;
+  text-align: left;
+  font-weight: normal;
+  font-style: italic;
+  color: white;
 }
 
 .Brand-Text,
