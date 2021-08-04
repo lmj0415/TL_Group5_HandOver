@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Shadows+Into+Light&display=swap");
 /* * {
   box-sizing: border-box;
   margin: 0;
@@ -110,7 +109,11 @@ footer {
   margin-top: 30px;
   text-align: center;
 } */
-/* ----------------------------------------------------- */
+/* ------------------------GENERAL SETTINGS----------------------------- */
+
+html {
+  font-family: Roboto + Condensed;
+}
 
 p {
   display: block;
@@ -122,7 +125,8 @@ p {
 
 h1 {
   display: block;
-  color: black;
+  color: white;
+  text-align: left;
   font-size: 2em;
   margin-top: 0.67em;
   margin-bottom: 0.67em;
@@ -133,7 +137,8 @@ h1 {
 
 h2 {
   display: block;
-  color: black;
+  text-align: left;
+  color: #afcb37;
   font-size: 1.5em;
   margin-top: 0.83em;
   margin-bottom: 0.83em;
@@ -162,7 +167,7 @@ h4 {
   font-weight: bold;
 }
 
-/* ----------------------------------------------------- */
+/* -----------------------NAVIGATION------------------------------ */
 
 .nav-wrapper {
   background-color: whitesmoke;
@@ -192,6 +197,7 @@ h4 {
   top: 10px;
   left: 10px;
 }
+
 /* 
 .Navbar .nav-wrapper .container {
   overflow: hidden;
@@ -200,7 +206,7 @@ h4 {
 
 /* -------------------------------------------------Position and sizing of burger button */
 .bm-burger-button {
-  position: fixed;
+  position: absolute;
   width: 36px;
   height: 30px;
   right: 25px;
@@ -242,6 +248,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: #373a47;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
+  width: 100%;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -252,6 +259,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Wrapper for item list */
 .bm-item-list {
   color: #b8b7ad;
+  background-color: #373a47;
   padding: 0.8em;
 }
 
@@ -264,3 +272,134 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
+
+/* -----------------------ELEMENTS------------------------------ */
+
+.Intro-Module {
+  margin-bottom: 10px;
+}
+
+.Intro-Module img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 3px 0px lightgrey;
+}
+
+/* .Text-Element-Background {
+  width: 30em;
+  height: 30em;
+  background: greenyellow;
+  border-radius: 50%;
+  position: absolute;
+  top: 20em;
+  left: -4em;
+  opacity: 0.7;
+} */
+.Text-Element {
+  text-align: left;
+  position: absolute;
+  top: 280px;
+  left: 2em;
+  width: 100%;
+  height: 20em;
+}
+
+/* .Text-Element {
+  background: transparent;
+  position: absolute;
+  overflow: hidden;
+  display: block;
+} */
+
+.Text-Element h1 {
+  padding-left: 5px;
+  padding-top: 2px;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.Text-Element p {
+  padding-left: 5px;
+  padding-top: 10px;
+  margin-bottom: 2px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.Brand-Text,
+.SEO-Text {
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.Target-Group-1,
+.Target-Group-2,
+.Target-Group-3 {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.Target-Group-1 img,
+.Target-Group-2 img,
+.Target-Group-3 img {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+  box-shadow: 5px 5px 0px lightgrey;
+}
+
+.Target-Group-1 .Title-Group-1,
+.Target-Group-2 .Title-Group-2,
+.Target-Group-3 .Title-Group-3 {
+  position: absolute;
+  top: 10%;
+  background-color: #afcb37;
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
+  padding: 8px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.Target-Group-1 .btn-1,
+.Target-Group-2 .btn-2,
+.Target-Group-3 .btn-3 {
+  position: absolute;
+  top: 70%;
+  left: 45%;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 40px;
+  background: white;
+  color: #afcb37;
+  display: inline-block;
+  text-decoration: none;
+  padding: 20px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+/* .Intro-Module {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50%;
+  box-shadow: 10px 10px grey;
+  position: absolute;
+  opacity: 0.6;
+  overflow: visible;
+}
+
+.Intro-Module img {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+} */
+
+/* ----------------------------------------------------- */
