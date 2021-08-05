@@ -64,7 +64,7 @@ const Home = () => {
                     <img src={ArrowLeft} alt=""/>
                 </button>
                 
-                <div className="carousel__track-container"></div>
+                <div className="carousel__track-container">
                     <ul className="carousel__track">
                         <li className="carousel__slide">
                             <img className="carousel__image" src={Slider_1} alt=""/>
@@ -87,7 +87,10 @@ const Home = () => {
                     <button className="carousel__indicators"></button>
                     <button className="carousel__indicators"></button>
                 </div>
+            </div>
 
+
+            
         </div>
     )
 }
