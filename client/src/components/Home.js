@@ -67,7 +67,7 @@ const Home = () => {
                 <div className="carousel__track-container"></div>
                     <ul className="carousel__track">
                         <li className="carousel__slide">
-                            <img src={Slider_1} alt=""/>
+                            <img className="carousel__image" src={Slider_1} alt=""/>
                         </li>
                         <li className="carousel__slide">
                             <img className="carousel__image" src={Slider_2} alt=""/>
@@ -76,19 +76,17 @@ const Home = () => {
                             <img className="carousel__image" src={Slider_3} alt=""/>
                         </li>
                     </ul>
+                </div>
 
                     <button className="carousel__btn carousel__btn--right">
                         <img className="carousel__image" src={ArrowRight} alt=""/>
                     </button>
-                    
+
                 <div className="carousel__nav">
                     <button className="carousel__indicators"></button>
                     <button className="carousel__indicators"></button>
                     <button className="carousel__indicators"></button>
                 </div>
-
-            </div>
-
 
         </div>
     )
