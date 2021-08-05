@@ -1,6 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import Intro from '../Intro.jpg'
+import Slider_1 from '../Slider_1.jpg'
+import Slider_2 from '../Slider_2.jpg'
+import Slider_3 from '../Slider_3.jpg'
+import ArrowRight from '../ArrowRight.svg'
+import ArrowLeft from '../ArrowLeft.svg'
 import Gastro from '../Gastro.jpg'
 import Needy from '../Needy.jpg'
 import Donator from '../Donator.jpg'
@@ -23,7 +28,7 @@ const Home = () => {
                 <p>Fate is not always kind. Some of us have to face difficulties in their lives which are sometimes hart to overcome. Therefore not all of us are able to participate in social life due to low income levels or other challenges. 
                    <br/>A small gesture of kindness can help in multiple ways. With a small donation a meal can be shared.</p>
             </div>
-            
+
             <div className="Target-Groups">
                 <div className="Target-Group-1">
                     <Link to="/gastro">
@@ -53,6 +58,38 @@ const Home = () => {
                 <p>Fate is not always kind. Some of us have to face difficulties in their lives which are sometimes hart to overcome. Therefore not all of us are able to participate in social life due to low income levels or other challenges. 
                    <br/>A small gesture of kindness can help in multiple ways. With a small donation a meal can be shared.</p>
             </div>
+
+            <div className="carousel">
+                <button className="carousel__btn carousel__btn--left">
+                    <img src={ArrowLeft} alt=""/>
+                </button>
+                
+                <div className="carousel__track-container"></div>
+                    <ul className="carousel__track">
+                        <li className="carousel__slide">
+                            <img src={Slider_1} alt=""/>
+                        </li>
+                        <li className="carousel__slide">
+                            <img className="carousel__image" src={Slider_2} alt=""/>
+                        </li>
+                        <li className="carousel__slide">
+                            <img className="carousel__image" src={Slider_3} alt=""/>
+                        </li>
+                    </ul>
+
+                    <button className="carousel__btn carousel__btn--right">
+                        <img className="carousel__image" src={ArrowRight} alt=""/>
+                    </button>
+                    
+                <div className="carousel__nav">
+                    <button className="carousel__indicators"></button>
+                    <button className="carousel__indicators"></button>
+                    <button className="carousel__indicators"></button>
+                </div>
+
+            </div>
+
+
         </div>
     )
 }

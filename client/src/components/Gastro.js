@@ -7,9 +7,8 @@ const Gastro = () => {
         <div className="Intro-Module">
             <img src={Intro_Gastro} alt="Man looking into the streets"/>
             <div className="Text-Element">
-                <p>Alles was Sie wissen müssen.</p>
                 <h1 className="center">Gastronomen</h1> 
-                <p className="italic">"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut."</p>
+                <p className="italic">"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut.cd"</p>
             </div>  
         </div>
 
