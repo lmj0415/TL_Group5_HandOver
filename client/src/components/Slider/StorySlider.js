@@ -40,7 +40,7 @@ export default function Slider() {
                     >
                     <Link to={obj.link}>
                         <img src={process.env.PUBLIC_URL + `/Imgs/${obj.img}`} />
-                        <h3>{obj.title}</h3>
+                        <h2>{obj.title}</h2>
                         <p>{obj.post}</p>
                         <button className="StoryBtn">{obj.CTA}</button> 
                     </Link>

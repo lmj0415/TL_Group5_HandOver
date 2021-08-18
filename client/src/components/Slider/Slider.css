@@ -163,19 +163,21 @@ button:focus {
   background: rgba(0, 0, 0, 0.418);
 }
 
-.container-slider h3,
+.container-slider h2,
 .container-slider p {
   position: absolute;
   color: white;
-  left: 2em;
   z-index: 1;
 }
-.container-slider h3 {
-  top: 60%;
+.container-slider h2 {
+  top: 56%;
+  left: 1.4em;
+  font-size: 1.7em;
 }
 
 .container-slider p {
   top: 65%;
+  left: 2.3em;
 }
 
 .container-slider .StoryBtn {

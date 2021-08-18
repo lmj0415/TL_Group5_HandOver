@@ -23,7 +23,7 @@ const Home = () => {
                
             </div>
             <div className="Brand-Text">
-                <h2>Together we are better. <br/>Let's enrich social life.</h2>
+                <h3>Together we are better. <br/>Let's enrich social life.</h3>
                 <p>Fate is not always kind. Some of us have to face difficulties in their lives which are sometimes hart to overcome. Therefore not all of us are able to participate in social life due to low income levels or other challenges. 
                    <br/>A small gesture of kindness can help in multiple ways. With a small donation a meal can be shared.</p>
             </div>
@@ -34,28 +34,28 @@ const Home = () => {
                 <div className="Target-Group-1">
                     <Link to="/gastro">
                         <img src={Gastro} alt="Woman in backer shop"/>
-                        <h3 className="Title-Group-1">Gastro</h3>
+                        <h2 className="Title-Group-1">Gastro</h2>
                         <button className="btn-1"> Mehr erfahren</button>
                     </Link>
                 </div>
                 <div className="Target-Group-2">
                     <Link to="/donator">
                         <img src={Donator} alt="Money in hands"/>
-                        <h3 className="Title-Group-2">Donator</h3>
+                        <h2 className="Title-Group-2">Donator</h2>
                         <button className="btn-2"> Mehr erfahren</button>
                     </Link>
                 </div>
                 <div className="Target-Group-3">
                     <Link to="/needy">
                         <img src={Needy} alt="Homeless on the streets"/>
-                        <h3 className="Title-Group-3">Needy</h3>
+                        <h2 className="Title-Group-3">Needy</h2>
                         <button className="btn-3"> Mehr erfahren</button>
                     </Link>
                 </div>
             </div>
 
             <div className="SEO-Text">
-                <h2>Together we are better. <br/>Let's enrich social life.</h2>
+                <h3>Together we are better. <br/>Let's enrich social life.</h3>
                 <p>Fate is not always kind. Some of us have to face difficulties in their lives which are sometimes hart to overcome. Therefore not all of us are able to participate in social life due to low income levels or other challenges. 
                    <br/>A small gesture of kindness can help in multiple ways. With a small donation a meal can be shared.</p>
             </div>

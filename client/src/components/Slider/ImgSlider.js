@@ -43,9 +43,7 @@ export default function Slider() {
                     ) }
                     >
                     <Link to={obj.link}>
-                        <img className="dataImg"
-                        src={process.env.PUBLIC_URL + `/Imgs/slide${index + 1}.jpg`} 
-                        />                      
+                        <img className="dataImg" src={process.env.PUBLIC_URL + `/Imgs/${obj.img}`} />                      
                     </Link>
                     </div>
                 )

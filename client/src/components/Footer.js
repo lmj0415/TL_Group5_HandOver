@@ -13,9 +13,7 @@ const Footer = () => {
                 <Link id="contact" className="footer-item" to="/contact">
                     <img src={Contact} alt=""/>Contact</Link>
                 <Link id="about" className="footer-item" to="/about">
-                    <img src={About} alt=""/>About</Link>
-                <Link id="map" className="footer-item" to="/map">
-                    <img src={Maps} alt=""/>Location Map</Link>
+                    <img src={About} alt=""/>About us</Link>
             </ul>
         </div>
     )

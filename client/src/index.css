@@ -31,7 +31,7 @@ h1 {
   font-weight: bold;
 }
 
-h2 {
+h3 {
   display: block;
   text-align: left;
   color: #afcb37;
@@ -43,7 +43,7 @@ h2 {
   font-weight: bold;
 }
 
-h3 {
+h2 {
   display: block;
   font-size: 1.17em;
   margin-top: 1em;
@@ -249,7 +249,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   top: 10%;
   background-color: #afcb37;
   color: white;
-  font-size: 26px;
+  font-size: 1.7em;
   font-weight: bold;
   text-align: center;
   width: 100%;
@@ -298,9 +298,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .footer-item img {
-  width: 40px;
-  height: 40px;
-  padding-right: 10px;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+.footer-item h4 {
 }
 
 .footer-item p {
