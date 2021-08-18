@@ -39,10 +39,7 @@ export default function Slider() {
                     className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
                     >
                     <Link to={obj.link}>
-                        <img 
-                        src={process.env.PUBLIC_URL + `/Imgs/story${index + 1}.jpg`} 
-
-                        />
+                        <img src={process.env.PUBLIC_URL + `/Imgs/${obj.img}`} />
                         <h3>{obj.title}</h3>
                         <p>{obj.post}</p>
                         <button className="StoryBtn">{obj.CTA}</button> 

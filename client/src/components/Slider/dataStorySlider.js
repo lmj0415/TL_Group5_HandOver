@@ -8,7 +8,8 @@ const dataSlider = [
     subTitle: "Lorem",
     post: "Post sth. Lorem ipsum dolar",
     CTA: "Mehr erfahren",
-    link:"./gastro"
+    link:"./gastro",
+    img: "story1.jpg"
   },
   {
     id: uuidv4(),
@@ -16,7 +17,8 @@ const dataSlider = [
     subTitle: "Lorem",
     post: "Post sth. Lorem ipsum dolar",
     CTA: "Mehr erfahren",
-    link:"./donator"
+    link:"./donator",
+    img: "story2.jpg"
   },
   {
     id: uuidv4(),
@@ -24,7 +26,8 @@ const dataSlider = [
     subTitle: "Lorem",
     post: "Post sth. Lorem ipsum dolar",
     CTA: "Mehr erfahren",
-    link:"./needy"
+    link:"./needy",
+    img: "story3.jpg"
   },
   
 ];
