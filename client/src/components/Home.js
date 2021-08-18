@@ -1,15 +1,14 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Intro from '../Intro.jpg'
-import Slider_1 from '../Slider_1.jpg'
-import Slider_2 from '../Slider_2.jpg'
-import Slider_3 from '../Slider_3.jpg'
-import ArrowRight from '../ArrowRight.svg'
-import ArrowLeft from '../ArrowLeft.svg'
-import Gastro from '../Gastro.jpg'
-import Needy from '../Needy.jpg'
-import Donator from '../Donator.jpg'
-// import Heart from '../Heart.jpg'
+import Intro from './Imgs/Home/Intro.jpg'
+// import Slider_1 from '../Slider_1.jpg'
+// import Slider_2 from '../Slider_2.jpg'
+// import Slider_3 from '../Slider_3.jpg'
+import Gastro from './Imgs/Home/Gastro.jpg'
+import Needy from './Imgs/Home/Needy.jpg'
+import Donator from './Imgs/Home/Donator.jpg'
+import StorySlider from './Slider/StorySlider'
+import ImgSlider from './Slider/ImgSlider'
 
 const Home = () => {
     return (
@@ -28,6 +27,8 @@ const Home = () => {
                 <p>Fate is not always kind. Some of us have to face difficulties in their lives which are sometimes hart to overcome. Therefore not all of us are able to participate in social life due to low income levels or other challenges. 
                    <br/>A small gesture of kindness can help in multiple ways. With a small donation a meal can be shared.</p>
             </div>
+
+            <ImgSlider/>
 
             <div className="Target-Groups">
                 <div className="Target-Group-1">
@@ -59,11 +60,9 @@ const Home = () => {
                    <br/>A small gesture of kindness can help in multiple ways. With a small donation a meal can be shared.</p>
             </div>
 
-            <div className="carousel">
-                <button className="carousel__btn carousel__btn--left">
-                    <img src={ArrowLeft} alt=""/>
-                </button>
-                
+           
+            {/* <div className="carousel">
+                              
                 <div className="carousel__track-container">
                     <ul className="carousel__track">
                         <li className="carousel__slide">
@@ -77,21 +76,31 @@ const Home = () => {
                         </li>
                     </ul>
                 </div>
-
-                    <button className="carousel__btn carousel__btn--right">
-                        <img className="carousel__image" src={ArrowRight} alt=""/>
-                    </button>
-
+                
                 <div className="carousel__nav">
-                    <button className="carousel__indicators"></button>
-                    <button className="carousel__indicators"></button>
-                    <button className="carousel__indicators"></button>
-                </div>
-            </div>
+                    <div className="carousel__nav__bubble"></div>
+                        <button className="carousel__btn carousel__btn--left">
+                            <p>❮</p>
+                        </button>
+                        
+                        <button className="carousel__indicator current-slide"></button>
+                        <button className="carousel__indicator"></button>
+                        <button className="carousel__indicator"></button>
+                    
+                        <button className="carousel__btn carousel__btn--right">
+                            <p>❯</p>
+                        </button>
+                   
+                 </div>
 
+            </div> */}
 
-            
+            <StorySlider/>
+                
         </div>
+
+
+
     )
 }
 

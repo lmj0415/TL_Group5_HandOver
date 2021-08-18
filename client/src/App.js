@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Home from './components/Home'
 import Needy from './components/Needy'
@@ -23,6 +24,7 @@ class App extends Component{
               <Route path='/contact' component={Contact} />
               {/* <Route path="/stories" component = {Stories} />  */}
               <Route path="/cms" component = {CMS} /> 
+          <Footer/>
         </div>
       </BrowserRouter>
     );

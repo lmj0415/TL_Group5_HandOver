@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../logo.png'
+import Logo from './Imgs/Icons/logo.png'
 import {Link} from 'react-router-dom'
 import { bubble as Menu } from 'react-burger-menu'
 
