@@ -1,5 +1,5 @@
 import React from 'react'
-import Intro_Gastro from '../Intro_Gastro.jpg'
+import Intro_Gastro from './Imgs/Cat/Intro_Gastro.jpg'
 
 const Gastro = () => {
     return (

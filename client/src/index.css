@@ -1,118 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Shadows+Into+Light&display=swap");
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-}
-
-.container {
-  max-width: 500px;
-  margin: 30px auto;
-  overflow: auto;
-  min-height: 300px;
-  border: 1px solid steelblue;
-  padding: 30px;
-  border-radius: 5px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.btn {
-  display: inline-block;
-  background: #000;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 15px;
-  font-family: inherit;
-}
-
-.btn:focus {
-  outline: none;
-}
-
-.btn:active {
-  transform: scale(0.98);
-}
-
-.btn-block {
-  display: block;
-  width: 100%;
-}
-
-.task {
-  background: #f4f4f4;
-  margin: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.task.reminder {
-  border-left: 5px solid green;
-}
-
-.task h3 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.add-form {
-  margin-bottom: 40px;
-}
-
-.form-control {
-  margin: 20px 0;
-}
-
-.form-control label {
-  display: block;
-}
-
-.form-control input {
-  width: 100%;
-  height: 40px;
-  margin: 5px;
-  padding: 3px 7px;
-  font-size: 17px;
-}
-
-.form-control-check {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.form-control-check label {
-  flex: 1;
-}
-
-.form-control-check input {
-  flex: 2;
-  height: 20px;
-}
 
 footer {
   margin-top: 30px;
   text-align: center;
-} */
+}
+*/
 /* ------------------------GENERAL SETTINGS----------------------------- */
 
-html {
-  font-family: Roboto + Condensed;
+* {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 p {
@@ -135,7 +31,7 @@ h1 {
   font-weight: bold;
 }
 
-h2 {
+h3 {
   display: block;
   text-align: left;
   color: #afcb37;
@@ -147,7 +43,7 @@ h2 {
   font-weight: bold;
 }
 
-h3 {
+h2 {
   display: block;
   font-size: 1.17em;
   margin-top: 1em;
@@ -167,7 +63,7 @@ h4 {
   font-weight: bold;
 }
 
-/* -----------------------NAVIGATION------------------------------ */
+/* --------------------------------------NAVBAR------------------------------------ */
 
 .nav-wrapper {
   background-color: whitesmoke;
@@ -179,14 +75,14 @@ h4 {
   font-size: 1.5em;
   color: black;
   padding-top: 0.8em;
-  padding-left: 2.8em;
+  padding-left: 3.5em;
   margin-top: 0em;
 }
 
 .nav-wrapper .container h2 {
   font-size: 1em;
   color: black;
-  padding-left: 4.2em;
+  padding-left: 5.2em;
   margin-top: -10px;
 }
 
@@ -198,13 +94,12 @@ h4 {
   left: 10px;
 }
 
-/* 
-.Navbar .nav-wrapper .container {
+/* .Navbar .nav-wrapper .container {
   overflow: hidden;
   padding-left: 80px;
 } */
 
-/* -------------------------------------------------Position and sizing of burger button */
+/* -------Position and sizing of burger button---- */
 .bm-burger-button {
   position: absolute;
   width: 36px;
@@ -218,8 +113,8 @@ h4 {
   background: #373a47;
 }
 
-/* Color/shape of burger icon bars on hover
-.bm-burger-bars-hover {
+/* Color/shape of burger icon bars on hover*/
+/* .bm-burger-bars-hover {
   background: #373a47;
 } */
 
@@ -275,10 +170,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: rgba(0, 0, 0, 0.3);
 }
 
-/* -----------------------ELEMENTS------------------------------ */
+/* ----------------------------------PAGE-ELEMENTS----------------------------------- */
 
 .Intro-Module {
   margin-bottom: 10px;
+  position: relative;
 }
 
 .Intro-Module img {
@@ -287,22 +183,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
   box-shadow: 0px 3px 0px lightgrey;
 }
 
-/* .Text-Element-Background {
-  width: 30em;
-  height: 30em;
-  background: greenyellow;
-  border-radius: 50%;
-  position: absolute;
-  top: 20em;
-  left: -4em;
-  opacity: 0.7;
-} */
 .Text-Element {
   text-align: left;
   position: absolute;
-  top: 300px;
+  top: 55%;
   left: 2em;
-  width: 100%;
   height: 20em;
 }
 
@@ -333,8 +218,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .Brand-Text,
 .SEO-Text {
-  padding: 10px 0;
-  margin-bottom: 20px;
+  margin: 10px 2em 20px;
+}
+
+.Target-Groups {
+  margin: 20px 20px;
 }
 
 .Target-Group-1,
@@ -361,7 +249,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   top: 10%;
   background-color: #afcb37;
   color: white;
-  font-size: 26px;
+  font-size: 1.7em;
   font-weight: bold;
   text-align: center;
   width: 100%;
@@ -389,12 +277,44 @@ Note: Beware of modifying this element as it can break the animations - you shou
   margin: 2px 2px;
   cursor: pointer;
 }
+
+/* -----------------------FOOTER------------------------------ */
+.footer-container {
+  background-color: whitesmoke;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  padding: 10px 20px 20px;
+  font-size: 1.5em;
+  border: 3px visible;
+  border-color: rgba(0, 0, 0, 0.418);
+  box-shadow: -3px 0px 0px rgba(128, 128, 128, 0.589);
+}
+
+.footer-item {
+  display: flex;
+  height: 60px;
+  color: black;
+}
+
+.footer-item img {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+.footer-item h4 {
+}
+
+.footer-item p {
+  display: inline-block;
+}
+
 /*-------------------------CAROUSEL--------------------- */
-.carousel {
+/* .carousel {
   position: relative;
   height: auto;
-  width: 80%;
-  margin: 0s auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .carousel__image {
@@ -416,25 +336,69 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .carousel__slide {
-  position: relative;
+  position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
 }
 
-.carusel__btn {
+.carousel__btn * {
+  margin: 0;
+}
+
+.carousel__btn {
+  border: 0;
+  background-color: inherit;
+  color: #ffffff;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.carousel__nav {
+  position: relative;
+  text-align: right;
+  padding-top: 12em;
+  padding-bottom: 2em;
+}
+
+.carousel__nav__bubble {
+  position: absolute;
+  left: 10em;
+  top: 8em;
+  right: -3em;
+  bottom: -1em;
+  z-index: -1;
+  background-color: #afcb37;
+  border: 1px hidden;
+  border-radius: 50%;
+}
+
+.carousel__indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin: 0 2px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.carousel__indicator.current-slide {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+/* .carousel__btn img {
+  width: 80px;
+  background-color: #afcb37;
+} */
+
+/*---------------------------------------------- */
+/* .carousel-story__btn {
   position: absolute;
   top: 50%;
   height: 100%;
   transform: translateY(-50%);
-}
+} */
 
-.carousel__btn img {
-  width: 80px;
-  background-color: #afcb37;
-}
-
-/*---------------------------------------------- */
 /* .Intro-Module {
   width: 100px;
   height: 100px;
