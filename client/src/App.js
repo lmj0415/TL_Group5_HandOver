@@ -8,6 +8,7 @@ import Donator from './components/Donator'
 import Contact from './components/Contact'
 // import Stories from "./components/CMS/Stories"
 import CMS from "./components/CMS/CMSComponent"
+import { ContactProvider } from './Context/ContactContext'
 
 
 class App extends Component{
@@ -20,7 +21,10 @@ class App extends Component{
               <Route path='/needy' component={Needy} />
               <Route path='/gastro' component={Gastro} />
               <Route path='/donator' component={Donator} />
-              <Route path='/contact' component={Contact} />
+              <ContactProvider> 
+                <Route path='/contact' component={Contact} />
+              </ContactProvider>
+             
               {/* <Route path="/stories" component = {Stories} />  */}
               <Route path="/cms" component = {CMS} /> 
         </div>
