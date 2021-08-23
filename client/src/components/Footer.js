@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import Contact from './Imgs/Icons/contact.svg'
 import About from './Imgs/Icons/user.svg'
-import Maps from './Imgs/Icons/location_02.svg'
+// import Maps from './Imgs/Icons/location_02.svg'
 
 
 const Footer = () => {
