@@ -25,7 +25,7 @@ function CMSContainer(props) {
             </nav>
             <div className="cmsContent" >
                 <Switch>
-                    <Route exact path="/cms/stories">
+                    <Route exact path="/cms/table">
                         <ShowTable
                         isLoading = {props.isLoading}
                         meta = {props.sMethode.meta}

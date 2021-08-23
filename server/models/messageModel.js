@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 //define schema
 const messageSchema = new Schema({
-    betreff: {
+    name: {
         type: String,
         require: true,
     },
@@ -12,8 +12,16 @@ const messageSchema = new Schema({
         type: String,
         require: true,
     },
+    betreff : {
+        type: String,
+        require: true,
+    },
+    message : {
+        type: String,
+        require: true,
+    },
 }, {timestamps: true,});
 
 
 //define model
-module.exports = mongoose.model("Message", messageSchema);
+module.exports = mongoose.model("Message", messageSchema); 

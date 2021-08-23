@@ -23,7 +23,7 @@ router.post("/table", async (req, res) =>{
     try{
         const savedTable = await table.save()
         res.json(savedTable)
-    }catch (err) {
+    } catch (err) {
         res.json({Message: err})
     }
 })

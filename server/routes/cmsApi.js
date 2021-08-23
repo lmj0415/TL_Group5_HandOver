@@ -88,8 +88,10 @@ router.get("/messages/:postID", async (req, res) => {
 
 router.post("/messages", async (req, res) =>{
     const message = new Message ( {
-        betreff: req.body.betreff,
+        name: req.body.name,
         email: req.body.email,
+        betreff: req.body.betreff,
+        message: req.body.message
     })
 
     try{

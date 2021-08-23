@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Intro from './Imgs/Home/Intro.jpg'
 // import Slider_1 from '../Slider_1.jpg'
 // import Slider_2 from '../Slider_2.jpg'
 // import Slider_3 from '../Slider_3.jpg'
@@ -10,18 +9,14 @@ import Donator from './Imgs/Home/Donator.jpg'
 import StorySlider from './Slider/StorySlider'
 import ImgSlider from './Slider/ImgSlider'
 
+import IntroModule from './IntroModule'
+
 const Home = () => {
     return (
         <div className="container">
-            <div className="Intro-Module">
-                <img src={Intro} alt="Man looking into the streets"/>
-                {/* <div className="Text-Element-Background"></div> */}
-                <div className="Text-Element">
-                    <p>A social project to enrich our society.</p>
-                    <h1 className="center">Yes, we care.<br/>What about you?</h1> 
-                </div>
-               
-            </div>
+            <IntroModule 
+                subheading= "A social Project to enrich our society"
+                heading= {<> Yes, we care. <br/> What about you? </> } />
             <div className="Brand-Text">
                 <h3>Together we are better. <br/>Let's enrich social life.</h3>
                 <p>Fate is not always kind. Some of us have to face difficulties in their lives which are sometimes hart to overcome. Therefore not all of us are able to participate in social life due to low income levels or other challenges. 
