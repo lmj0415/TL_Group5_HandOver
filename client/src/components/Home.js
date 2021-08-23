@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Intro from './Imgs/Home/Intro.jpg'
 // import Slider_1 from '../Slider_1.jpg'
 // import Slider_2 from '../Slider_2.jpg'
 // import Slider_3 from '../Slider_3.jpg'
@@ -9,6 +8,8 @@ import Needy from './Imgs/Home/Needy.jpg'
 import Donator from './Imgs/Home/Donator.jpg'
 import StorySlider from './Slider/StorySlider'
 import ImgSlider from './Slider/ImgSlider'
+
+import IntroModule from './IntroModule'
 
 const Home = () => {
     return (

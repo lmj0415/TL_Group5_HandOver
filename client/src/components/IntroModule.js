@@ -1,5 +1,6 @@
 import React from "react"
-import Intro from '../Intro.jpg'
+
+import Intro from './Imgs/Home/Intro.jpg'
 
 function IntroModule(props) {
     return(
