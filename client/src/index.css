@@ -278,6 +278,39 @@ Note: Beware of modifying this element as it can break the animations - you shou
   cursor: pointer;
 }
 
+.btn {
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 40px;
+  color: white;
+  background: #afcb37;
+  display: inline-block;
+  text-decoration: none;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+form {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+input.ipt {
+  width: 100%;
+  font-size: 16px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  border-color: #afcb37;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
 /* -----------------------FOOTER------------------------------ */
 .footer-container {
   background-color: whitesmoke;
