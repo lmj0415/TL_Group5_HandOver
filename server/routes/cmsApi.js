@@ -27,8 +27,12 @@ router.get("/stories/:postID", async (req, res) => {
 
 router.post("/stories", async (req, res) =>{
     const story = new Story ( {
-        title:req.body.title,
-        name: req.body.name,
+        author: req.body.author,
+        title: req.body.title,
+        subtitle: req.body.subtitle,
+        story: req.body.story,
+        img: req.body._title + ".jpg",
+        link: "/" + req.body._title,
     })
 
     try{
@@ -56,8 +60,13 @@ router.patch("/stories/:postID", async (req, res) => {
         const stories = await Story.updateOne(
             { _id: req.params.postID },
             {$set: {
-                title:req.body.title,
-                name: req.body.name,}
+                author: req.body.author,
+                title: req.body.title,
+                subtitle: req.body.subtitle,
+                story: req.body.story,
+                img: req.body._title + ".jpg",
+                link: "/" + req.body._title,
+            }
             }
         )
         res.json(stories)
@@ -88,7 +97,7 @@ router.get("/messages/:postID", async (req, res) => {
 
 router.post("/messages", async (req, res) =>{
     const message = new Message ( {
-        name: req.body.name,
+        author: req.body.author,
         email: req.body.email,
         betreff: req.body.betreff,
         message: req.body.message
@@ -119,8 +128,11 @@ router.patch("/messages/:postID", async (req, res) => {
         const stories = await Story.updateOne(
             { _id: req.params.postID },
             {$set: {
-                betreff:req.body.betreff,
-                email: req.body.email,}
+                author: req.body.author,
+                email: req.body.email,
+                betreff: req.body.betreff,
+                message: req.body.message
+            }
             }
         )
         res.json(stories)

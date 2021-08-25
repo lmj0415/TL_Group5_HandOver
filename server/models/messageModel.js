@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 //define schema
 const messageSchema = new Schema({
-    name: {
+    author: {
         type: String,
         require: true,
     },

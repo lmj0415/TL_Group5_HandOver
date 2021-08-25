@@ -5,17 +5,15 @@ import{useContactContext} from "../Context/ContactContext"
 
 const Contact = () => {
 
-    const [message, isSent, error, setIsSent, handleChange, submitMessage] = useContactContext()
+    const [message, error, setError, handleChange, submitMessage] = useContactContext()
     let confirmation
 
     useEffect(() => {
-        setIsSent(false)
+        setError("I was set")
     }, [])
 
-    if (isSent) {
-         error ? 
-            confirmation =  <p>Error, please try again</p> 
-            :confirmation =  <p>Message was send successfully!</p> 
+    if (error !== "") {
+            confirmation =  <p>{error}</p> 
     }
 
     return (
@@ -24,11 +22,11 @@ const Contact = () => {
             subheading= "If you want more Information"
             heading= {"Contact us now!"}/>
             <form>
-                <input name="name" placeholder="Name" value={message.name} onChange={handleChange} ></input>
-                <input name="eMail"  placeholder="E-Mail" value={message.eMail} onChange={handleChange}></input>
-                <input name="betreff"  placeholder="Betreff" value={message.betreff} onChange={handleChange}></input>
-                <textarea name="message" placeholder="Message" value={message.message} onChange={handleChange}></textarea>
-                <button name="submit" onClick={submitMessage}>Send</button>
+                <input className="ipt" name="author" placeholder="Name" value={message.author} onChange={handleChange}></input>
+                <input className="ipt" type="email" name="email"  placeholder="E-Mail" value={message.email} onChange={handleChange}></input>
+                <input className="ipt" name="betreff"  placeholder="Betreff" value={message.betreff} onChange={handleChange}></input>
+                <textarea className="ipt" name="message" placeholder="Message" value={message.message} onChange={handleChange}></textarea>
+                <input type="submit" name="submit" className="btn" onClick={submitMessage} value="Send" ></input>
             </form>
             {confirmation}
             

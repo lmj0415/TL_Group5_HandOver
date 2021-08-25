@@ -1,17 +1,16 @@
 import React, {useState, createContext, useContext} from "react"
 
-export const ContactContext = createContext()
+const ContactContext = createContext()
 
 export const ContactProvider = props => {
 
     const [message, setMessage] = useState({
-        name:"",
-        eMail:"",
+        author:"",
+        email:"",
         betreff:"",
         message: "",
     })
-    const [isSent, setIsSent] = useState()
-    const [error, setError] = useState()
+    const [error, setError] = useState("")
 
 
     const handleChange = (event) => {
@@ -26,42 +25,67 @@ export const ContactProvider = props => {
         );
     }
 
+    const checkValues = (obj) => {
+        for (var key in obj) {
+            if (obj[key] === "") {
+                return true
+            }
+            return false
+        }
+    }
+
+    const validateEmail = (email) => {
+        
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+
+
+
     const submitMessage = (event) => {
         event.preventDefault()
-        setIsSent(true)
-        fetch('http://localhost:9000/cms/messages', {
-                method: 'POST', 
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(message),
+        setError("")
+        if (checkValues(message)) {
+            setError("Please fill all the fields!")
+            return
+        } else if (validateEmail(message.email) === false) {
+            setError("Please check your email")
+            return
+        } else {
+            console.log(message)
+            fetch('http://localhost:9000/cms/messages', {
+                    method: 'POST', 
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(message),
+                    })
+                .then(res => res.json())
+                .then(data => {
+                    console.log('Success:', data);
+                    })
+                .then(() => {
+                    setMessage({
+                        author:"",
+                        email:"",
+                        betreff:"",
+                        message: "",
+                    })
+                    setError("Message was send successfully!")
                 })
-            .then(res => res.json())
-            .then(data => {
-                console.log('Success:', data);
-                })
-            .then(() => {
-                setMessage({
-                    name:"",
-                    eMail:"",
-                    betreff:"",
-                    message: "",
-                })
-                setError(false)
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                setError(true)
-                });
+                .catch((error) => {
+                    console.error('Error:', error);
+                    setError("Something went wrong, please try again!")
+                    });
+        }
     }
 
  
     return(
         <ContactContext.Provider value={[
             message,
-            isSent,
             error,
-            setIsSent,
+            setError,
             handleChange,
             submitMessage
         ]}>

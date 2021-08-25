@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 
-import CMSContainer from "./CMSContainer"
+import CMSContainer from "../CMS"
 
 class CMS extends Component {
     constructor() {
@@ -136,7 +136,7 @@ class CMS extends Component {
         const id = event.target.name
         if(!id) {
 
-            //create Story API
+            create Story API
             fetch('http://localhost:9000/stories', {
                 method: 'POST', 
                 headers: {
@@ -165,7 +165,7 @@ class CMS extends Component {
             
         } else {
 
-            //Edit Story api
+            Edit Story api
             fetch('http://localhost:9000/stories/' +id, {
                 method: 'PATCH', 
                 headers: {
@@ -193,7 +193,7 @@ class CMS extends Component {
         }
     }
 
-    //table
+    table
 
     sortTable(event) {
         event.preventDefault()
@@ -259,7 +259,7 @@ class CMS extends Component {
     }
 
     handleButton(event) {
-       //event.preventDefault()
+       event.preventDefault()
         const name = event.target.name
         const id = event.target.id
 
@@ -275,7 +275,7 @@ class CMS extends Component {
     }
 
 
-    //methode
+    methode
     handleChange(event) {
         const {name, value} = event.target;
         this.setState(prevState => ({
@@ -362,55 +362,55 @@ export default CMS
 
 
 
-// {
-//     params: "",
-//     tData: {
-//         meta: {},
-//         methode: [],
-//         body: []
-//     },
-//     stories: {
-//         meta: {title: "Storie"},
-//         methode: [
-//             {name:"Name", tag: "<th>", className:"cmsTh"},
-//             {name:"Title", tag: "<th>", className:"cmsTh"},
-//             {name:"Date", tag: "<th>", className:"cmsTh"},
-//             {name:"Edit", tag: "<button>", onClick: "edit"},
-//             {name:"Delete", tag: "<button>", onClick:" props.delete"},
+{
+    params: "",
+    tData: {
+        meta: {},
+        methode: [],
+        body: []
+    },
+    stories: {
+        meta: {title: "Storie"},
+        methode: [
+            {name:"Name", tag: "<th>", className:"cmsTh"},
+            {name:"Title", tag: "<th>", className:"cmsTh"},
+            {name:"Date", tag: "<th>", className:"cmsTh"},
+            {name:"Edit", tag: "<button>", onClick: "edit"},
+            {name:"Delete", tag: "<button>", onClick:" props.delete"},
 
-//         ],
-//         body: []
+        ],
+        body: []
 
-//     },
+    },
 
-//     messages: {
-//         meta: {title: "Message"},
-//         methode: [
-//             {name:"Name", tag: "<th>", className:"cmsTh"},
-//             {name:"Title", tag: "<th>", className:"cmsTh"},
-//             {name:"Date", tag: "<th>", className:"cmsTh"},
-//             {name:"Message", tag: "<button>", onclick: "answer"},
-//             {name:"Delete", tag: "<button>", onclick: "delete"},
+    messages: {
+        meta: {title: "Message"},
+        methode: [
+            {name:"Name", tag: "<th>", className:"cmsTh"},
+            {name:"Title", tag: "<th>", className:"cmsTh"},
+            {name:"Date", tag: "<th>", className:"cmsTh"},
+            {name:"Message", tag: "<button>", onclick: "answer"},
+            {name:"Delete", tag: "<button>", onclick: "delete"},
 
-//         ],
-//         body: []
+        ],
+        body: []
 
-//     }
-// }
+    }
+}
 
-// this.fetchTableData = this.fetchTableData.bind(this)
-// this.callAPI = callAPI.bind(this)
-// }
+this.fetchTableData = this.fetchTableData.bind(this)
+this.callAPI = callAPI.bind(this)
+}
 
 
 
-// fetchTableData(event) {
-// event.preventDefault()
-// const dataName= event.target.id
+fetchTableData(event) {
+event.preventDefault()
+const dataName= event.target.id
 
-// this.setState({
-//     tData: this.state[dataName]
-//     })
+this.setState({
+    tData: this.state[dataName]
+    })
 
-// this.callAPI()
-// }
+this.callAPI()
+}
