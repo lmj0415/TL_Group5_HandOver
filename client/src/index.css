@@ -345,6 +345,24 @@ textarea {
 .container-slider .Textblock {
   top: 250px;
 }
+.Text-Element-Intro h1 {
+  top: 59%;
+  left: 1.4em;
+  right: 4.2em;
+  padding-bottom: 1em;
+  font-size: 1.7em;
+  text-align: left;
+  position: absolute;
+}
+.Text-Element-Intro p {
+  top: 75%;
+  left: 2.4em;
+  right: 1.4em;
+  color: white;
+  position: absolute;
+
+  font-weight: bold;
+}
 
 /*-------------------------CAROUSEL--------------------- */
 /* .carousel {

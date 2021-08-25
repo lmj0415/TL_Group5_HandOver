@@ -178,21 +178,21 @@ button:focus {
   z-index: 1;
 }
 .container-slider h2 {
-  top: 56%;
+  top: 55%;
   left: 1.4em;
-  right: 1.4em;
+  right: 4.2em;
   font-size: 1.7em;
 }
 
 .container-slider p {
-  top: 65%;
+  top: 70%;
   left: 2.3em;
-  right: 2.3em;
+  right: 3.3em;
 }
 
 .container-slider .StoryBtn {
   position: absolute;
-  top: 80%;
+  top: 84%;
   left: 2em;
   font-size: 14px;
   font-weight: bold;
