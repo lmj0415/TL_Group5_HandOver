@@ -264,8 +264,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .Target-Group-3 .btn-3 {
   position: absolute;
   top: 73%;
-  left: 55%;
-  font-size: 14px;
+  right: 1em;
+  font-size: 15px;
   font-weight: bold;
   border: none;
   border-radius: 40px;
@@ -340,6 +340,10 @@ textarea {
 
 .footer-item p {
   display: inline-block;
+}
+/*-------------------------STORY STYLES--------------------- */
+.container-slider .Textblock {
+  top: 250px;
 }
 
 /*-------------------------CAROUSEL--------------------- */

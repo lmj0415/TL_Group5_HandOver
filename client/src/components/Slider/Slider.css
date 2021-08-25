@@ -50,7 +50,7 @@
 .ImgSliderNavigation .container-dots {
   position: absolute;
   top: 113%;
-  left: 72%;
+  left: 73%;
   transform: translateX(-60%);
   display: flex;
 }
@@ -73,6 +73,14 @@
 
 .container-slider-img .next-active-anim img {
   object-position: left;
+}
+
+.container-slider .slider button {
+  z-index: -1;
+}
+
+.container-slider .active-anim button {
+  z-index: 1;
 }
 
 .dataImg {
@@ -172,12 +180,14 @@ button:focus {
 .container-slider h2 {
   top: 56%;
   left: 1.4em;
+  right: 1.4em;
   font-size: 1.7em;
 }
 
 .container-slider p {
   top: 65%;
   left: 2.3em;
+  right: 2.3em;
 }
 
 .container-slider .StoryBtn {

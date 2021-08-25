@@ -30,21 +30,21 @@ const Home = () => {
                     <Link to="/gastro">
                         <img src={Gastro} alt="Woman in backer shop"/>
                         <h2 className="Title-Group-1">Gastro</h2>
-                        <button className="btn-1"> Mehr erfahren</button>
+                        <button className="btn-1"> Learn more ❯</button>
                     </Link>
                 </div>
                 <div className="Target-Group-2">
                     <Link to="/donator">
                         <img src={Donator} alt="Money in hands"/>
                         <h2 className="Title-Group-2">Donator</h2>
-                        <button className="btn-2"> Mehr erfahren</button>
+                        <button className="btn-2"> Learn more ❯</button>
                     </Link>
                 </div>
                 <div className="Target-Group-3">
                     <Link to="/needy">
                         <img src={Needy} alt="Homeless on the streets"/>
                         <h2 className="Title-Group-3">Needy</h2>
-                        <button className="btn-3"> Mehr erfahren</button>
+                        <button className="btn-3"> Learn more ❯</button>
                     </Link>
                 </div>
             </div>

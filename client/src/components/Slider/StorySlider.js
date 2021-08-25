@@ -33,7 +33,8 @@ export default function Slider() {
     return (
         <div className="container-slider">
             {dataStorySlider.map((obj, index) => {
-                return (
+            
+                return ( 
                     <div
                     key={obj.id}
                     className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
@@ -41,7 +42,7 @@ export default function Slider() {
                     <Link to={obj.link}>
                         <img src={process.env.PUBLIC_URL + `/Imgs/${obj.img}`} />
                         <h2>{obj.title}</h2>
-                        <p>{obj.post}</p>
+                        <p>{obj.subTitle}</p>
                         <button className="StoryBtn">{obj.CTA}</button> 
                     </Link>
                     </div>
