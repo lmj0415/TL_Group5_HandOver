@@ -9,8 +9,9 @@ const Contact = () => {
     let confirmation
 
     useEffect(() => {
-        setError("I was set")
-    }, [])
+        setError()
+        return
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     if (error !== "") {
             confirmation =  <p>{error}</p> 
@@ -40,3 +41,4 @@ const Contact = () => {
 }
 
 export default Contact
+ 

@@ -1,33 +1,44 @@
 import React, {useEffect} from "react"
 
+import CMSNav from "./CMSNav"
+
 import { useCMSContext } from "../Context/CMSContext"
 import { useTableContext } from "../Context/TableContext"
 
 function ShowTable() {
 
     const {table, loading, setLoading, showModal} = useCMSContext()
-    const {tableData, tableMethode, sortTable, getTableData, deletePost} = useTableContext()
+    const {tableData, tableMethode, sortedBy, setSortedBy, sortTable, getTableData, deletePost, provideStdMail} = useTableContext()
 
     const tHead = tableMethode.tableHead
     const tBody = tableMethode.tableBody
     const meta = tableMethode.meta 
+
+    const href = ()=> {
+        var w= window.open('mailto:', '_blank')
+        setTimeout(() => { w.close() }, 1000);
+
+    };
+
     
     useEffect(()=> {
         setLoading(true)
+        setSortedBy("")
         getTableData()
-    }, [])
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
 
     useEffect(()=> {
         setLoading(true) 
         getTableData()
-    }, [table])
+    }, [table]) // eslint-disable-line react-hooks/exhaustive-deps
 
 
     if (loading === true ) {
         return(
-            <div className="cmsContent">
+            <div className="cmsContainer">
                 <div className="cmsHead">
-                    <h2>Loading... </h2>
+                    <CMSNav />
                 </div>
             </div>
             
@@ -36,7 +47,11 @@ function ShowTable() {
         const tableHead = tHead.map(element => {
             return(
             <th key= {element.title}>
-                <button className="waves-effect waves-teal btn-flat" name= {meta.tableName} id={element.name} onClick= {sortTable} >{element.title}</button>
+                <button className={`waves-effect waves-teal btn-flat`} name= {meta.tableName} id={element.name} onClick= {sortTable} >
+                {sortedBy===element.name? "↓ " : ""}
+                {sortedBy===`${element.name}-rev`? `↑ `: ""} 
+                {element.title}
+                </button>
             </th>)
         }) 
 
@@ -57,21 +72,28 @@ function ShowTable() {
         })
 
         return(
-            <div className="cmsContent" >
+            <div className="cmsContainer" >
                 <div className="cmsHead">
-                    <h2>{meta.title}</h2>
-                    <button className="btn waves-effect waves-light"  name= {"new"+ meta.name} onClick={showModal} >New {meta.name}</button>
+                    <CMSNav />
+                    <button 
+                        className="btn waves-effect waves-light"  
+                        name= {"new"+ meta.name} 
+                        onClick={table==="messages"? () => href(): showModal} >
+                            New {meta.name}
+                        </button>
                 </div>
-                <table className="cmsTable">
-                    <thead>
-                        <tr>
-                            {tableHead}
-                        </tr>
-                    </thead>
-                    <tbody className= "tbody">
-                        {tableBody}
-                    </tbody>
-                </table>
+                <div className="cmsContent">
+                    <table className="cmsTable">
+                        <thead>
+                            <tr>
+                                {tableHead}
+                            </tr>
+                        </thead>
+                        <tbody className= "tbody">
+                            {tableBody}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         )
     }

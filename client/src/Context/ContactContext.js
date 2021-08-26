@@ -26,12 +26,10 @@ export const ContactProvider = props => {
     }
 
     const checkValues = (obj) => {
-        for (var key in obj) {
-            if (obj[key] === "") {
-                return true
-            }
-            return false
-        }
+        const exists = Object.keys(obj).some(function(k) {
+            return obj[k] === "";
+        });
+        return exists
     }
 
     const validateEmail = (email) => {

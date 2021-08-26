@@ -216,6 +216,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
   color: white;
 }
 
+.Text-Element.story {
+  padding-top: 50px;
+  padding-left: none;
+}
+
 .Brand-Text,
 .SEO-Text {
   margin: 10px 2em 20px;
@@ -361,6 +366,53 @@ form p {
   font-size: 1.2em;
   font-weight: bold;
 }
+.storieContainer a {
+  display: flex;
+  align-content: flex-end;
+  height: 500px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.storieContainer img {
+  position: absolute;
+  height: 500px;
+  z-index: -1;
+}
+
+.storiesContent {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  color: #fff;
+  margin: 30px;
+  z-index: 5;
+}
+
+.storiesContent .h2 {
+  font-size: 24px;
+  margin-bottom: 0;
+  margin-right: 30px;
+}
+
+.storiesContent button {
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 40px;
+  background: white;
+  color: #afcb37;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.fof {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
 /* -----------------------FOOTER------------------------------ */
 .footer-container {
   background-color: whitesmoke;

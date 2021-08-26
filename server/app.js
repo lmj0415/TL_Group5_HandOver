@@ -6,7 +6,6 @@ const cors = require("cors")
 const bodyParser = require("body-parser")
 
 
-const storiesApi = require('./routes/storiesApi.js');
 const methodeApi = require("./routes/methodeApi");
 const cmsApi = require("./routes/cmsApi")
 
@@ -19,7 +18,6 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use('/methode', methodeApi);
 app.use('/cms', cmsApi);
-app.use('/', storiesApi);
 
 
 

@@ -34,7 +34,6 @@ export default function Slider() {
         <div className="ImgSliderContainer">
         <div className="container-slider-img">
             {dataImgSlider.map((obj, index) => {
-               console.log (slideIndex,index)
                 return (
                     <div
                     key={obj.id}
@@ -43,7 +42,7 @@ export default function Slider() {
                     ) }
                     >
                     <Link to={obj.link}>
-                        <img className="dataImg" src={process.env.PUBLIC_URL + `/Imgs/${obj.img}`} />                      
+                        <img className="dataImg" src={process.env.PUBLIC_URL + `/Imgs/${obj.img}`} alt="img-sliger-img" />                      
                     </Link>
                     </div>
                 )
