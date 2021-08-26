@@ -91,6 +91,9 @@ export const ModalContextProvider = props => {
 
 
     const handleChange = (event) => {
+        if(table==="messages") {
+            return
+        }
         const name = event.target.name
         const value = event.target.value
         setModalData(prevMessage => {
@@ -101,6 +104,15 @@ export const ModalContextProvider = props => {
             
         );
     }
+    
+
+    const provideMailData = () => {
+        const {author, email, betreff, message,} = modalData
+        const body = encodeURIComponent(`\n\n\nYou send following Message \n  Name: ${author} \n  Betreff: ${betreff} \n  Message: ${message}`)
+        console.log(body)
+        var w= window.open( `mailto:${email}?body=${body}`, '_blank')
+        setTimeout(() => { w.close() }, 1000);
+    }
 
     return(
         <ModalContext.Provider value={{
@@ -109,6 +121,7 @@ export const ModalContextProvider = props => {
             setModalData,
             handleChange,
             submitModalData,
+            provideMailData,
         }}>
             {props.children}
         </ModalContext.Provider>

@@ -11,8 +11,6 @@ export const TableContextProvider = props => {
     const [tableData, setTableData] = useState([])
     const [tableMethode, setTableMethode] = useState({})
     const [sortedBy, setSortedBy] = useState()
-
-    console.log(tableData, tableMethode)
     
     const getTableData = async () => {
         try {
@@ -84,6 +82,8 @@ export const TableContextProvider = props => {
         }
 
     }
+
+    
 
     return(
         <TableContext.Provider value={{

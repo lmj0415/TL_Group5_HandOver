@@ -22,6 +22,7 @@ export const CMSContextProvider = props => {
             setPostId(id)
         }     
         setModal(true)  
+        
     }
 
 
