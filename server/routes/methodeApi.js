@@ -17,7 +17,9 @@ router.post("/table", async (req, res) =>{
     const table = new Table ( {
         meta: req.body.meta,
         tableHead : req.body.tableHead,
-        tableBody : req.body.tableBody
+        tableBody : req.body.tableBody,
+        modal: req.body.modal
+
     })
 
     try{
@@ -45,7 +47,9 @@ router.patch("/table/:tableID", async (req, res) => {
             {$set: {
                 meta: req.body.meta,
                 tableHead : req.body.tableHead,
-                tableBody : req.body.tableBody}
+                tableBody : req.body.tableBody,
+                modal: req.body.modal
+                }
             }
         )
         res.json(table)
@@ -69,6 +73,15 @@ router.get("/stories", async (req, res) => {
 router.get("/messages", async (req, res) => {
     try{
         const messagesTable = await Table.find({ _id: "60ff3b6302792c3ab8178fcc"})
+        res.json(messagesTable)
+    } catch (err) {
+        res.json({Message: err})
+    }
+})
+
+router.get("/map", async (req, res) => {
+    try{
+        const messagesTable = await Table.find({ _id: "6126ea9bfab4320f7c381000"})
         res.json(messagesTable)
     } catch (err) {
         res.json({Message: err})

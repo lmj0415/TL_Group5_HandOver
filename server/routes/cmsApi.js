@@ -3,6 +3,7 @@ const router = express.Router();
 
 const Story = require("../models/storyModel")
 const Message = require("../models/messageModel")
+const Map =  require("../models/mapModel")
 
 
 
@@ -125,7 +126,7 @@ router.delete("/messages/:postId", async (req, res) => {
 
 router.patch("/messages/:postID", async (req, res) => {
     try{
-        const stories = await Story.updateOne(
+        const stories = await Message.updateOne(
             { _id: req.params.postID },
             {$set: {
                 author: req.body.author,
@@ -141,6 +142,71 @@ router.patch("/messages/:postID", async (req, res) => {
     }
 })
 
+//MAP
+
+router.get("/map", async (req, res) => {
+    try{
+        const data = await Map.find()
+        res.json(data)
+    }catch (err) {
+        res.json({message: err})
+    }
+}) 
+
+router.get("/map/:postID", async (req, res) => {
+    try{
+        const data = await Map.find({ _id: req.params.postID })
+        res.json(data)
+    }catch (err) {
+        res.json({message: err})
+    }
+})
+
+router.post("/map", async (req, res) =>{
+    const data = new Map ( {
+        name: req.body.name,
+        adress: req.body.adress,
+        link: req.body.link,
+        note: req.body.note
+    })
+
+    try{
+        const newData = await data.save()
+        res.json(newData)
+    }catch (err) {
+        res.json({Message: err})
+    }
+})
+
+
+router.delete("/map/:postId", async (req, res) => {
+    try{
+        const data = await Map.remove({ _id: req.params.postId })
+        res.json(data)
+    } catch (err) {
+        res.json({Message: err})
+    }
+})
+
+
+
+router.patch("/map/:postID", async (req, res) => {
+    try{
+        const data = await Map.updateOne(
+            { _id: req.params.postID },
+            {$set: {
+                name: req.body.name,
+                adress: req.body.adress,
+                link: req.body.link,
+                note: req.body.note
+            }
+            }
+        )
+        res.json(data)
+    }catch (err) {
+        res.json({message: err})
+    }
+})
 
 
 module.exports = router

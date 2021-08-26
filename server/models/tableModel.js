@@ -29,6 +29,10 @@ const tableSchema = new Schema({
         type: Object,
         require: true,
     },
+    modal : {
+        type: Object,
+        required: true,
+    }
 
 
 });

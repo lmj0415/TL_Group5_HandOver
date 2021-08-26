@@ -1,12 +1,16 @@
 import React, {useEffect} from "react"
+import {Link} from 'react-router-dom'
+import Logo from './Imgs/Icons/logo.png'
+
+
 
 import { useCMSContext } from "../Context/CMSContext"
 import { useTableContext } from "../Context/TableContext"
 
 function ShowTable() {
 
-    const {table, loading, setLoading, showModal} = useCMSContext()
-    const {tableData, tableMethode, sortTable, getTableData, deletePost} = useTableContext()
+    const {table, loading, setLoading, showTable, showModal} = useCMSContext()
+    const {tableData, tableMethode, sortedBy, setSortedBy, sortTable, getTableData, deletePost} = useTableContext()
 
     const tHead = tableMethode.tableHead
     const tBody = tableMethode.tableBody
@@ -14,20 +18,38 @@ function ShowTable() {
     
     useEffect(()=> {
         setLoading(true)
+        setSortedBy("")
         getTableData()
-    }, [])
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
 
     useEffect(()=> {
         setLoading(true) 
         getTableData()
-    }, [table])
+    }, [table]) // eslint-disable-line react-hooks/exhaustive-deps
 
+    const nav = <div className= "cmsNav">
+        <Link to="/">
+            <div className= "cmsNavI">
+                <img src={Logo} alt="Hand Over Logo"/>
+            </div>
+        </Link>
+        <div className={`cmsNavE ${table==="stories"? "act": ""}`} id="stories" onClick={showTable}>
+            <h5>STORIES</h5>
+        </div>
+        <div className={`cmsNavE ${table==="messages"? "act": ""}`} id="messages" onClick={showTable}>
+            <h5>MESSANGES</h5>
+        </div>
+        <div className={`cmsNavE ${table==="map"? "act": ""}`} id="map" onClick={showTable}>
+            <h5>MAP</h5>
+        </div>
+    </div>
 
     if (loading === true ) {
         return(
-            <div className="cmsContent">
+            <div className="cmsContainer">
                 <div className="cmsHead">
-                    <h2>Loading... </h2>
+                    {nav}
                 </div>
             </div>
             
@@ -36,7 +58,11 @@ function ShowTable() {
         const tableHead = tHead.map(element => {
             return(
             <th key= {element.title}>
-                <button className="waves-effect waves-teal btn-flat" name= {meta.tableName} id={element.name} onClick= {sortTable} >{element.title}</button>
+                <button className={`waves-effect waves-teal btn-flat`} name= {meta.tableName} id={element.name} onClick= {sortTable} >
+                {sortedBy===element.name? "↓ " : ""}
+                {sortedBy===`${element.name}-rev`? `↑ `: ""} 
+                {element.title}
+                </button>
             </th>)
         }) 
 
@@ -57,21 +83,23 @@ function ShowTable() {
         })
 
         return(
-            <div className="cmsContent" >
+            <div className="cmsContainer" >
                 <div className="cmsHead">
-                    <h2>{meta.title}</h2>
+                    {nav}
                     <button className="btn waves-effect waves-light"  name= {"new"+ meta.name} onClick={showModal} >New {meta.name}</button>
                 </div>
-                <table className="cmsTable">
-                    <thead>
-                        <tr>
-                            {tableHead}
-                        </tr>
-                    </thead>
-                    <tbody className= "tbody">
-                        {tableBody}
-                    </tbody>
-                </table>
+                <div className="cmsContent">
+                    <table className="cmsTable">
+                        <thead>
+                            <tr>
+                                {tableHead}
+                            </tr>
+                        </thead>
+                        <tbody className= "tbody">
+                            {tableBody}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         )
     }

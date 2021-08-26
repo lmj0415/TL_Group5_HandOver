@@ -1,7 +1,6 @@
 import React from "react"
 
 import ShowTable from "./ShowTable"
-import CMSNav from "./CMSNav"
 import ShowModal from "./ShowModal"
 
 import { TableContextProvider } from "../Context/TableContext"
@@ -14,8 +13,7 @@ function CMS() {
     const {modal} = useCMSContext()
 
     return(
-        <div className="cmsContainer">
-            <CMSNav />
+        <div>
             <TableContextProvider>
                 <ShowTable />
                 {modal === true ? 
@@ -24,8 +22,7 @@ function CMS() {
                     </ModalContextProvider>
                 : null}
             </TableContextProvider>
-            
-        </div>
+        </div>    
     )
 }
 

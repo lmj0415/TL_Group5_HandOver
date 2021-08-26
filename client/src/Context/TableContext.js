@@ -1,4 +1,4 @@
-import React, {useState, createContext, useContext, useCallback} from "react"
+import React, {useState, createContext, useContext} from "react"
 
 import { useCMSContext } from "../Context/CMSContext"
 
@@ -6,18 +6,19 @@ const TableContext = createContext()
 
 export const TableContextProvider = props => {
 
-    const {table, loading, setLoading, setModal} = useCMSContext()
+    const {table, setLoading} = useCMSContext()
 
     const [tableData, setTableData] = useState([])
     const [tableMethode, setTableMethode] = useState({})
     const [sortedBy, setSortedBy] = useState()
+
+    console.log(tableData, tableMethode)
     
     const getTableData = async () => {
         try {
             const dres = await fetch("http://localhost:9000/cms/" + table)
             let data = await dres.json()
-            const sortedData = await data.reverse()
-            setTableData(sortedData)
+            setTableData(data)
 
             const mres = await fetch("http://localhost:9000/methode/" + table)
             const methode = await mres.json()
@@ -51,11 +52,10 @@ export const TableContextProvider = props => {
     const sortTable = (event) => {
         event.preventDefault()
         const sortBy = event.target.id
-        console.log (sortBy)
         if (sortedBy === sortBy) {
                 const sorted = tableData.reverse()
                 setTableData(sorted)
-                setSortedBy("")
+                setSortedBy( sortBy + "-rev")
                 return
         } else {
             setSortedBy(sortBy)
@@ -89,6 +89,8 @@ export const TableContextProvider = props => {
         <TableContext.Provider value={{
             tableData,
             tableMethode,
+            sortedBy,
+            setSortedBy,
             getTableData,
             deletePost,
             sortTable,

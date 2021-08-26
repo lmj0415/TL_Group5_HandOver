@@ -24,7 +24,7 @@ export const ModalContextProvider = props => {
         if (postId !== null) {
             getModalData()
         } 
-    }, [postId])
+    }, [postId]) // eslint-disable-line react-hooks/exhaustive-deps
 
     useEffect(() => {
         setError(null)

@@ -9,8 +9,9 @@ const Contact = () => {
     let confirmation
 
     useEffect(() => {
-        setError("I was set")
-    }, [])
+        setError()
+        return
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     if (error !== "") {
             confirmation =  <p>{error}</p> 
@@ -27,11 +28,11 @@ const Contact = () => {
                 <input className="ipt" name="betreff"  placeholder="Betreff" value={message.betreff} onChange={handleChange}></input>
                 <textarea className="ipt" name="message" placeholder="Message" value={message.message} onChange={handleChange}></textarea>
                 <input type="submit" name="submit" className="btn" onClick={submitMessage} value="Send" ></input>
-            </form>
-            {confirmation}
-            
+            </form>    
+            {confirmation}        
         </>
     )
 }
 
 export default Contact
+ 

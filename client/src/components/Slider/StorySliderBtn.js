@@ -4,12 +4,11 @@ import leftArrow from "../Imgs/Icons/left-arrow.svg";
 import rightArrow from "../Imgs/Icons/right-arrow.svg";
 
 export default function StorySliderBtn({ direction, moveSlide }) {
-  console.log(direction, moveSlide);
   return (
     <button
       onClick={moveSlide}
       className={direction === "next" ? "btn-slide next" : "btn-slide prev"}>
-      <img src={direction === "next" ? rightArrow : leftArrow} />
+      <img src={direction === "next" ? rightArrow : leftArrow} alt="story-slider-btn" />
     </button>
   );
 }
