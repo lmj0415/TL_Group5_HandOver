@@ -166,8 +166,7 @@ router.post("/map", async (req, res) =>{
     const data = new Map ( {
         name: req.body.name,
         adress: req.body.adress,
-        link: req.body.link,
-        note: req.body.note
+        position: req.body.position
     })
 
     try{
@@ -197,8 +196,7 @@ router.patch("/map/:postID", async (req, res) => {
             {$set: {
                 name: req.body.name,
                 adress: req.body.adress,
-                link: req.body.link,
-                note: req.body.note
+                position: req.body.position
             }
             }
         )

@@ -11,12 +11,18 @@ import CMS from './components/CMS'
 import Stories from './components/Stories'
 import Story from './components/Story'
 import FourOFour from './components/404'
+import Map from './components/Map'
+
 import { StoryContextProvider } from './Context/StoriesContext'
 import { ContactProvider } from './Context/ContactContext'
 import { CMSContextProvider } from './Context/CMSContext'
+import { MapContextProvider } from './Context/MapContext'
 
 
 function App() {
+
+  const path = window.location.pathname
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -51,6 +57,11 @@ function App() {
                 <Contact />
               </ContactProvider>
             </Route>
+            <Route path='/map'>
+              <MapContextProvider>
+                <Map />
+              </MapContextProvider>
+            </Route>
             <Route path="/cms">
               <CMSContextProvider>
                 <CMS />
@@ -60,7 +71,7 @@ function App() {
               <FourOFour />
             </Route>
           </Switch> 
-        {window.location.pathname !== "/cms" ? <Footer/>: null}
+        {path !== "/map" || path !=="/map"   ? <Footer/>: null}
       </div>
     </BrowserRouter> 
   )

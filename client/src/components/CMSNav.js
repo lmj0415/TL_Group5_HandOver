@@ -20,7 +20,7 @@ function CMSNav() {
                 <h5>STORIES</h5>
             </div>
             <div className={`cmsNavE ${table==="messages"? "act": ""}`} id="messages" onClick={showTable}>
-                <h5>MESSANGES</h5>
+                <h5>MESSAGES</h5>
             </div>
             <div className={`cmsNavE ${table==="map"? "act": ""}`} id="map" onClick={showTable}>
                 <h5>MAP</h5>

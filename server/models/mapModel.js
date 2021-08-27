@@ -12,12 +12,8 @@ const mapSchema = new Schema({
         type: String,
         require: true,
     },
-    link : {
-        type: String,
-        require: true,
-    },
-    note : {
-        type: String,
+    position : {
+        type: Object,
         require: true,
     },
 }, {timestamps: true,});

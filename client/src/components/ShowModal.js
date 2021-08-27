@@ -12,7 +12,6 @@ function StoryForm() {
 
     const modal = tableMethode.modal
 
-
     if (loading === true ) {
         return(
             <div className="cmsContent">
@@ -55,12 +54,13 @@ function StoryForm() {
                             onChange={handleChange}>
                             </input></label>
                     <label className="cmsI">{modal[3].title}
+
                         <textarea 
                             className="cmsI" 
                             name={modal[3].name} 
                             placeholder={modal[3].title} 
                             value={modalData[modal[3].name]} 
-                            onChange={handleChange}></textarea></label>
+                            onChange={handleChange}></textarea></label> 
                 </form>
                 {error !== null?
                     <h5> {error}</h5>

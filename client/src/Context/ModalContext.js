@@ -28,6 +28,14 @@ export const ModalContextProvider = props => {
 
     useEffect(() => {
         setError(null)
+        if ( table==="map" && postId===null) {
+            setModalData(prevMessage => {
+                let newObj = Object.assign({}, prevMessage)
+                newObj[modal[3].name] = `Öffnungszeiten: \n\nAnmerkung: \n\n`
+                return(newObj)
+            })
+        }
+        
     }, [])
 
 

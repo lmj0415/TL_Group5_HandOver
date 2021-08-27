@@ -8,7 +8,7 @@ import { useTableContext } from "../Context/TableContext"
 function ShowTable() {
 
     const {table, loading, setLoading, showModal} = useCMSContext()
-    const {tableData, tableMethode, sortedBy, setSortedBy, sortTable, getTableData, deletePost, provideStdMail} = useTableContext()
+    const {tableData, tableMethode, sortedBy, setSortedBy, sortTable, getTableData, deletePost} = useTableContext()
 
     const tHead = tableMethode.tableHead
     const tBody = tableMethode.tableBody
