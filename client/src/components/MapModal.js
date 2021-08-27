@@ -25,7 +25,7 @@ function MapModal() {
                 </div>
                 <div className="container">
                     <i class="fas fa-phone-alt"></i>
-                    <p>tel: 01567/234234 <br/> email: example@example.com</p>                
+                    <p>tel: <a href= "tel:01567234234">01567/234234</a> <br/> email: <a href="mailto:example@example.com">example@example.com</a> </p>                
                 </div>
             </div>
         </div>

@@ -22,6 +22,7 @@ import { MapContextProvider } from './Context/MapContext'
 function App() {
 
   const path = window.location.pathname
+  console.log(path)
 
   return (
     <BrowserRouter>
@@ -71,7 +72,7 @@ function App() {
               <FourOFour />
             </Route>
           </Switch> 
-        {path !== "/map" || path !=="/map"   ? <Footer/>: null}
+        {path !== "/map" ? <Footer/>: null}
       </div>
     </BrowserRouter> 
   )

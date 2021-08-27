@@ -5,9 +5,21 @@ const MapContext = createContext()
 export const MapContextProvider = (props) => {
 
     const [zoom, setZoom] = useState(10)
-    const [center, setCenter] = useState({
-        lat: 53.554, 
-        lng:  9.984})
+    const [cityData, setCityData] =useState({
+        hamburg:{
+            lat: 53.554, 
+            lng:  9.984
+        },
+        berlin: {
+            lat: 52.519482739619214, 
+            lng: 13.389776631881091
+        },
+        munich: {
+            lat: 48.13772642115075, 
+            lng: 11.572166623253272  
+        }
+    })
+    const [center, setCenter] = useState()
 
     const [mapData, setMapData] = useState([])
     const [location, setLocation] = useState(null)
@@ -15,6 +27,7 @@ export const MapContextProvider = (props) => {
 
     useEffect(() => {
         getMapData()
+        setCenter(cityData.hamburg)
     },[])
 
     useEffect(() => {
@@ -22,7 +35,7 @@ export const MapContextProvider = (props) => {
             setCenter(location.position)
         }
     }, [location])
-    
+        
 
     const showModal = async (id) => {
         await getLocationData(id)
@@ -31,6 +44,11 @@ export const MapContextProvider = (props) => {
 
     const closeModal = () => {
         setModal(false)
+    }
+
+    const showCity = (event) => {
+        const city = event.target.id
+        setCenter(cityData[city])
     }
 
     const getMapData = async () => {
@@ -59,6 +77,8 @@ export const MapContextProvider = (props) => {
         <MapContext.Provider value={{
             center,
             setCenter,
+            showCity,
+            cityData,
             zoom,
             mapData,
             location,

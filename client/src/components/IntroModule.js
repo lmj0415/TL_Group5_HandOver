@@ -6,7 +6,6 @@ function IntroModule(props) {
     return(
         <div className="Intro-Module">
             <img src={Intro} alt="Man looking into the streets"/>
-            {/* <div className="Text-Element-Background"></div> */}
             <div className="Text-Element">
                 <p>{props.subheading}</p>
                 <h1 className="center">{props.heading}</h1> 

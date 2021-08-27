@@ -1,13 +1,12 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-// import Slider_1 from '../Slider_1.jpg'
-// import Slider_2 from '../Slider_2.jpg'
-// import Slider_3 from '../Slider_3.jpg'
 import Gastro from './Imgs/Home/Gastro.jpg'
 import Needy from './Imgs/Home/Needy.jpg'
 import Donator from './Imgs/Home/Donator.jpg'
+import Map from "./Imgs/Home/Map.jpg"
 import StorySlider from './Slider/StorySlider'
 import ImgSlider from './Slider/ImgSlider'
+
 
 import IntroModule from './IntroModule'
 
@@ -55,42 +54,22 @@ const Home = () => {
                    <br/>A small gesture of kindness can help in multiple ways. With a small donation a meal can be shared.</p>
             </div>
 
-           
-            {/* <div className="carousel">
-                              
-                <div className="carousel__track-container">
-                    <ul className="carousel__track">
-                        <li className="carousel__slide">
-                            <img className="carousel__image" src={Slider_1} alt=""/>
-                        </li>
-                        <li className="carousel__slide">
-                            <img className="carousel__image" src={Slider_2} alt=""/>
-                        </li>
-                        <li className="carousel__slide">
-                            <img className="carousel__image" src={Slider_3} alt=""/>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div className="carousel__nav">
-                    <div className="carousel__nav__bubble"></div>
-                        <button className="carousel__btn carousel__btn--left">
-                            <p>❮</p>
-                        </button>
-                        
-                        <button className="carousel__indicator current-slide"></button>
-                        <button className="carousel__indicator"></button>
-                        <button className="carousel__indicator"></button>
-                    
-                        <button className="carousel__btn carousel__btn--right">
-                            <p>❯</p>
-                        </button>
-                   
-                 </div>
-
-            </div> */}
-
             <StorySlider/>
+
+            <div className="SEO-Text">
+                <h3>Together we are better. <br/>Let's enrich social life.</h3>
+                <p>Fate is not always kind. Some of us have to face difficulties in their lives which are sometimes hart to overcome. Therefore not all of us are able to participate in social life due to low income levels or other challenges. 
+                   <br/>A small gesture of kindness can help in multiple ways. With a small donation a meal can be shared.</p>
+            </div>
+            <Link to="/map">
+                <div className="Intro-Module">
+                    <img src={Map} alt="map"/>
+                    <div className="Text-Element story ">
+                        <h1 className="center"> Find Locations</h1> 
+                    </div>
+                    <button  className="mapBtn">More ❯</button> 
+                </div>
+            </Link>
                 
         </div>
 
