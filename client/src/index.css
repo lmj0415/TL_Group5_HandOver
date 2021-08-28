@@ -438,16 +438,8 @@ form p {
   padding: 20px;
 }
 
-<<<<<<< HEAD
 .mapBtn_l {
   font-size: 16px;
-=======
-.mapBtn {
-  position: absolute;
-  top: 82%;
-  left: 2em;
-  font-size: 14px;
->>>>>>> daf0ecb2f860299a43f1e5eed8d0ae6ff9bfcbbb
   font-weight: bold;
   border: none;
   border-radius: 40px;
