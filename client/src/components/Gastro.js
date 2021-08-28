@@ -13,7 +13,7 @@ const Gastro = () => {
         </div>
 
         <div className="Brand-Text">
-            <h2>Together we are better. <br/>Let's enrich social life.</h2>
+            <h3>Together we are better. <br/>Let's enrich social life.</h3>
             <p>Fate is not always kind. Some of us have to face difficulties in their lives which are sometimes hart to overcome. Therefore not all of us are able to participate in social life due to low income levels or other challenges. 
                <br/>A small gesture of kindness can help in multiple ways. With a small donation a meal can be shared.</p>
         </div>
