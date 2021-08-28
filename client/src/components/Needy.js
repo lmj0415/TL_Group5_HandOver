@@ -1,16 +1,36 @@
 import React from 'react'
+import Intro_Needy from './Imgs/Cat/Intro_Needy.jpg'
+import {Link} from 'react-router-dom'
+import Map from "./Imgs/Home/Map.jpg"
 
 const Needy = () => {
     return (
-        <div className="container">
-            <h4 className="center">Needy</h4>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-        
-
-        
+     <div className="container">
+        <div className="Intro-Module">
+            <img src={Intro_Needy} alt="Homeless man on the streets"/>
+            <div className="Text-Element">
+                <h1 className="center">Need a hand?</h1> 
+                <p className="italic">Having trouble affording a hot meal or a hot coffee lately? Let us offer you a hand. Thanks to many others who are willing to support you can get a free meal or coffee in participating locations.</p>
+            </div>  
         </div>
 
-        
+        <div className="Brand-Text">
+            <h2>Together we are better. <br/>Let's enrich social life.</h2>
+            <p>Fate is not always kind. Some of us have to face difficulties in their lives which are sometimes hart to overcome. Therefore not all of us are able to participate in social life due to low income levels or other challenges. 
+               <br/>A small gesture of kindness can help in multiple ways. With a small donation a meal can be shared.</p>
+        </div>
+
+        <Link to="/map">
+                <div className="Intro-Module">
+                    <img src={Map} alt="map"/>
+                    <div className="Text-Element story ">
+                        <h1 className="center"> Find all participating partners here.</h1> 
+                    </div>
+                    <button  className="mapBtn">To the locations ❯</button> 
+                </div>
+            </Link>
+
+    </div>    
     )
 }
 

@@ -1,5 +1,4 @@
 import React from "react"
-
 import Intro from './Imgs/Home/Intro.jpg'
 
 function IntroModule(props) {
