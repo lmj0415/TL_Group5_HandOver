@@ -374,7 +374,7 @@ form p {
   position: relative;
   display: flex;
   align-content: flex-end;
-  height: 440px;
+  height: 450px;
   width: 100%;
   margin-bottom: 10px;
 }
@@ -391,11 +391,11 @@ form p {
 
 .storiesContent {
   position: absolute;
-  height: 150px;
+  height: 175px;
   display: flex;
   flex-wrap: wrap;
   color: #fff;
-  margin: 20px;
+  margin: 2em;
   bottom: 0;
   z-index: 5;
   align-content: space-between;
@@ -404,10 +404,10 @@ form p {
 .storiesContent .h2 {
   font-size: 24px;
   margin-bottom: 0;
-  margin-right: 30px;
+  margin-right: 80px;
 }
 .storiesContent p {
-  margin: 0.2em 0;
+  margin: 0.5em 0;
 }
 
 .storiesContent button {
@@ -417,6 +417,7 @@ form p {
   border-radius: 40px;
   background: white;
   color: #afcb37;
+  margin: 0.3em 0;
   padding: 10px;
   cursor: pointer;
 }

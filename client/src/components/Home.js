@@ -6,8 +6,6 @@ import Donator from './Imgs/Home/Donator.jpg'
 import Map from "./Imgs/Home/Map.jpg"
 import StorySlider from './Slider/StorySlider'
 import ImgSlider from './Slider/ImgSlider'
-
-
 import IntroModule from './IntroModule'
 
 const Home = () => {
