@@ -10,22 +10,19 @@ function MapModal() {
     }
 
     const adress = location.adress.split(",")
+    const openingHours = location.openingHours.split(";")
     
     return(
         <div className="mapModal">
             <h5>{location.name}</h5>
             <div className="c">
                 <div className="container">
-                    <i class="fas fa-map-marker-alt"></i>
+                    <i className="fas fa-map-marker-alt"></i>
                     <p>{adress[0]}<br/>{adress[1]}</p>
                 </div>
                 <div className="container">
-                    <i class="far fa-clock"></i>
-                    <p>Mo-Fr: 07:00-19:00 <br/>Sa: 07:00-23:00</p>                    
-                </div>
-                <div className="container">
-                    <i class="fas fa-phone-alt"></i>
-                    <p>tel: <a href= "tel:01567234234">01567/234234</a> <br/> email: <a href="mailto:example@example.com">example@example.com</a> </p>                
+                    <i className="far fa-clock"></i>
+                    <p>{openingHours[0]}<br/>{openingHours[1]}</p>                    
                 </div>
             </div>
         </div>

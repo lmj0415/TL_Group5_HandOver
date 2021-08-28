@@ -83,6 +83,12 @@ export const TableContextProvider = props => {
 
     }
 
+    const copyToClipboard = (event) => {
+        const text = event.target.parentElement.innerText
+        navigator.clipboard.writeText(text)
+        alert(`Copied Text: "${text}"`)
+    }
+
     
 
     return(
@@ -94,6 +100,7 @@ export const TableContextProvider = props => {
             getTableData,
             deletePost,
             sortTable,
+            copyToClipboard,
         }}>
             {props.children}
         </TableContext.Provider>

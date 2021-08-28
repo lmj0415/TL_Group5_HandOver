@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { BrowserRouter, Route, Switch} from 'react-router-dom'
@@ -20,6 +20,8 @@ import { MapContextProvider } from './Context/MapContext'
 
 
 function App() {
+
+  const [hide, setHide] = useState()
 
   return (
     <BrowserRouter>
@@ -57,7 +59,7 @@ function App() {
             </Route>
             <Route path='/map'>
               <MapContextProvider>
-                <Map />
+                <Map setHide= {setHide} hide={hide}/>
               </MapContextProvider>
             </Route>
             <Route path="/cms">
@@ -69,7 +71,7 @@ function App() {
               <FourOFour />
             </Route>
           </Switch> 
-        {window.location.pathname !== "/map" ? <Footer/>: null}
+        {hide? null :<Footer/> }
       </div>
     </BrowserRouter> 
   )

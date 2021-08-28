@@ -31,7 +31,7 @@ export const ModalContextProvider = props => {
         if ( table==="map" && postId===null) {
             setModalData(prevMessage => {
                 let newObj = Object.assign({}, prevMessage)
-                newObj[modal[3].name] = `Öffnungszeiten: \n\nAnmerkung: \n\n`
+                newObj[modal[3].name] = `Mo-Fr: \nSa: `
                 return(newObj)
             })
         }

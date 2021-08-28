@@ -8,7 +8,7 @@ import { useTableContext } from "../Context/TableContext"
 function ShowTable() {
 
     const {table, loading, setLoading, showModal} = useCMSContext()
-    const {tableData, tableMethode, sortedBy, setSortedBy, sortTable, getTableData, deletePost} = useTableContext()
+    const {tableData, tableMethode, sortedBy, setSortedBy, sortTable, getTableData, deletePost, copyToClipboard} = useTableContext()
 
     const tHead = tableMethode.tableHead
     const tBody = tableMethode.tableBody
@@ -59,13 +59,16 @@ function ShowTable() {
             return(
                 <tr key= {element._id}>
                     <td key={tBody[0].name} >{element[tBody[0].name]}</td>
-                    <td key={tBody[1].name} >{element[tBody[1].name]}</td>
+                    <td key={tBody[1].name}>
+                            {element[tBody[1].name]}
+                            {table === "stories"?<i onClick={copyToClipboard} class="far fa-copy"></i>: null}
+                    </td>
                     <td key={tBody[2].name} >{element[tBody[2].name].split('T')[0]}</td>
                     <td key={tBody[3].name} > 
-                        <button className="btn waves-effect waves-light" name= {tBody[3].name} id={element._id} onClick={showModal} >{tBody[3].title}</button>
+                        <button className="btn waves-effect mapBtn_d" name= {tBody[3].name} id={element._id} onClick={showModal} >{tBody[3].title}</button>
                     </td>
                     <td key={tBody[4].name} >
-                        <button className="btn waves-effect waves-light" name={tBody[4].name} id={element._id} onClick={deletePost}  >{tBody[4].title}</button>
+                        <button className="btn waves-effect mapBtn_d" name={tBody[4].name} id={element._id} onClick={deletePost}  >{tBody[4].title}</button>
                     </td>
                 </tr>
             )
@@ -76,7 +79,7 @@ function ShowTable() {
                 <div className="cmsHead">
                     <CMSNav />
                     <button 
-                        className="btn waves-effect waves-light"  
+                        className="btn waves-effect mapBtn_l"  
                         name= {"new"+ meta.name} 
                         onClick={table==="messages"? () => href(): showModal} >
                             New {meta.name}

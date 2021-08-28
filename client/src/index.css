@@ -2,11 +2,6 @@
 
 /* ------------------------GENERAL SETTINGS----------------------------- */
 
-<<<<<<< HEAD
-/* * {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-} */
-=======
 * {
   font-family: "Roboto Condensed", Roboto, Oxygen, Ubuntu, Cantarell,
     "Open Sans", "Helvetica Neue", sans-serif;
@@ -16,7 +11,6 @@
 .handwritten {
   font-family: "Shadows Into Light";
 }
->>>>>>> 0af76d48a64d5db19107cde09512a32e5f52a1e3
 
 p {
   display: block;
@@ -433,11 +427,8 @@ form p {
   padding: 20px;
 }
 
-.mapBtn {
-  position: absolute;
-  top: 84%;
-  left: 2em;
-  font-size: 14px;
+.mapBtn_l {
+  font-size: 16px;
   font-weight: bold;
   border: none;
   border-radius: 40px;
@@ -445,12 +436,14 @@ form p {
   color: #afcb37;
   display: inline-block;
   text-decoration: none;
-  padding: 18px;
-  margin: 2px 2px;
   cursor: pointer;
+}
+.mapBtn_d {
+  font-size: 16px;
 }
 
 /* -----------------------Map------------------------------ */
+
 
 .map {
   width: 100%;
@@ -493,7 +486,7 @@ form p {
 
 .mapModal {
   position: absolute;
-  height: 35%;
+  height: 30%;
   width: 85%;
   bottom: 30px;
   left: 7.5%;
@@ -508,9 +501,9 @@ form p {
 }
 
 .mapModal h5 {
-  color: #b0cb37e0;
+  color: rgb(68, 68, 68);
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
 }
 
@@ -521,20 +514,21 @@ form p {
 .mapModal .container {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .mapModal i {
-  width: 10%;
   color: #b0cb37e0;
   margin: 4%;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .mapModal p {
-  width: 80%;
   font-size: 11px;
   margin: 5px 0px;
+  width: 50%
 }
 
 /*-------------------------LANDINGPAGE STORIES-------------------- */

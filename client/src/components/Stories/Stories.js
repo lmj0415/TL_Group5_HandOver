@@ -14,7 +14,7 @@ export default function Stories() {
             return(
                 <div className="storieContainer" id={obj._id}>
                     <Link to={"/story/" + obj._id}>
-                        <img src={process.env.PUBLIC_URL + `/Imgs/${obj.img}`} alt="story-slider-img"/>
+                        <img src={process.env.PUBLIC_URL + `/Imgs/${obj.img}`} alt={obj.img}/>
                         <div className ="storiesContent">
                             <h2 className="h2">{obj.title}</h2>
                             <p>{obj.subtitle}</p>

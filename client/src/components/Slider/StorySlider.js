@@ -50,7 +50,7 @@ export default function Slider() {
                             key={obj._id}
                             className={slideIndex === index + 1 ? "slide active-anim" : "slide"}>
                             <Link to={"/story/" + obj._id}>
-                                <img src={process.env.PUBLIC_URL + `/Imgs/${obj.img}`} alt="story-slider-img"/>
+                                <img src={process.env.PUBLIC_URL + `/Imgs/${obj.img}`} alt={obj.img}/>
                                 <h2>{obj.title}</h2>
                                 <p>{obj.subtitle}</p>
                                 <button className="StoryBtn">Read more ❯</button> 

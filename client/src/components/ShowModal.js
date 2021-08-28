@@ -28,9 +28,12 @@ function StoryForm() {
                 <h2>
                     {modalData._id? table==="messages"? null: "EDIT": "NEW"} {tableMethode.meta.name.toUpperCase()} 
                 </h2>
-                <button className="btn waves-effect waves-light" name= {""} onClick={table==="messages"? provideMailData: submitModalData} >{table==="messages"? "Answer": "Save"}</button>
+                <button className="btn waves-effect mapBtn_l " name= {""} onClick={table==="messages"? provideMailData: submitModalData} >{table==="messages"? "Answer": "Save"}</button>
             </div>
             <div className="cmsContent">
+                {error !== null?
+                        <h5> {error}</h5>
+                        : null}
                 <form>
                     <label className="cmsI">{modal[0].title}
                         <input 
@@ -62,9 +65,6 @@ function StoryForm() {
                             value={modalData[modal[3].name]} 
                             onChange={handleChange}></textarea></label> 
                 </form>
-                {error !== null?
-                    <h5> {error}</h5>
-                    : null}
             </div>
         </div>
     )

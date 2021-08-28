@@ -13,7 +13,11 @@ const mapSchema = new Schema({
         require: true,
     },
     position : {
-        type: Object,
+        type: String,
+        require: true,
+    },
+    openingHours : {
+        type: String,
         require: true,
     },
 }, {timestamps: true,});

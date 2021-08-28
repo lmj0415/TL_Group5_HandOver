@@ -20,7 +20,7 @@ export default function Story() {
                 :
                 <div>
                     <div className="Intro-Module">
-                        <img src={process.env.PUBLIC_URL + `/Imgs/${storyData[0].img}`} alt="Man looking into the streets"/>
+                        <img src={process.env.PUBLIC_URL + `/Imgs/${storyData[0].img}`} alt={storyData[0].img}/>
                         <div className="Text-Element story">
                             <h1 className="center">{storyData[0].title}</h1> 
                         </div>

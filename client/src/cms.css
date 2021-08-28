@@ -88,6 +88,12 @@
     color: #bdd847;
 }
 
+.fa-copy {
+    margin-left: 10px;
+    color: #b0cd37;
+    cursor: pointer;
+}
+
 
 .cmsModal {
     z-index: 5;

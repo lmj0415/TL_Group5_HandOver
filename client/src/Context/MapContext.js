@@ -32,7 +32,12 @@ export const MapContextProvider = (props) => {
 
     useEffect(() => {
         if (location != null){
-            setCenter(location.position)
+            const position = location.position.split(",")
+            console.log(position[0], position[1])
+            setCenter({
+                lat: parseFloat(position[0]),
+                lng: parseFloat(position[1])
+            })
         }
     }, [location])
         
@@ -49,6 +54,7 @@ export const MapContextProvider = (props) => {
     const showCity = (event) => {
         const city = event.target.id
         setCenter(cityData[city])
+        setModal(false)
     }
 
     const getMapData = async () => {

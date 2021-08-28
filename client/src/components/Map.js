@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { GoogleMap, Marker, useJsApiLoader} from '@react-google-maps/api';
 
 import MapModal from "./MapModal";
@@ -9,7 +9,14 @@ const GOOGLE_API_KEY = "AIzaSyACwa-ZJLf5s8iN3mjG8YJ_pBDrntB4FKs";
 
 
 
-function Map (){
+function Map (props){
+
+    useEffect(() => {
+        props.setHide(true)
+        return () => {
+            props.setHide(false)
+        }
+    },[])
 
     const { center, showCity, cityData, zoom, mapData, modal, location, closeModal, showModal} = useMapContext()
 
@@ -32,6 +39,7 @@ function Map (){
 
     const CustomMarker = (props) => {
         const {id} = props;
+
     
         const onMarkerClick = () => {
             showModal(id)
@@ -39,8 +47,8 @@ function Map (){
     
         return (
             <Marker
-                key={id}
                 icon={icon(id)}
+                options={{gestureHandling: 'greedy'}}
                 opacity={modal? id===location._id? 1:0.8:1}
                 onClick={onMarkerClick}
                 {...props}
@@ -51,10 +59,17 @@ function Map (){
 
     const marker = mapData==null? <></>: 
     mapData.map( element  =>{
+    const position = element.position.split(",")
+
         return(
+            
             <CustomMarker
+                key={element._id}
                 id={element._id}
-                position={element.position}
+                position={{
+                    lat: parseFloat(position[0]),
+                    lng: parseFloat(position[1])
+                }}
             />
         )
     })
