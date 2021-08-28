@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
-import './Slider/Slider.css'
-import { useStoryContext } from '../Context/StoriesContext'
+import './Story.css'
+import { useStoryContext } from '../../Context/StoriesContext'
 
 export default function Story() {
     

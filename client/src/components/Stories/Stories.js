@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom"
-import './Slider/Slider.css'
-import { useStoryContext } from '../Context/StoriesContext'
+import './Story.css'
+import { useStoryContext } from '../../Context/StoriesContext'
 
 export default function Stories() {
 

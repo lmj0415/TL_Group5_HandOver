@@ -8,6 +8,10 @@ In the project directory, you can run:
 
 ### `npm start`
 
+If failure message: "Version Missmatch react react-dom" appears, please use this command:
+
+    npm i google-map-react --legacy-peer-deps
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
