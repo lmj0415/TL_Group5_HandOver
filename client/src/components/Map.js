@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import { GoogleMap, Marker, useJsApiLoader} from '@react-google-maps/api';
 
 import MapModal from "./MapModal";
