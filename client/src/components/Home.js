@@ -59,6 +59,7 @@ const Home = () => {
             </div>
 
             <StorySlider/>
+            
             <div className="SEO-Text">
                 <h3>You want to know where to find us?</h3>
                 <p>In the below linked map you will find all participating restaurants and coffee bars in Hamburg, Berlin and Munich. With a click on the marked spots you will get further details including their address and opening hours.</p>
