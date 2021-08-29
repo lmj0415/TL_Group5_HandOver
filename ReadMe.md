@@ -21,5 +21,5 @@ The Website should open in your browser automatically. Else, you can simply got 
 
 ## project structure
 \
-The frontend consists of two parts. The mobile first-orientated SPA with all public data and the desctop-orientated CMS you can find under localhost:3000/cms. 
+The frontend consists of two parts. The mobile first-orientated SPA with all public data and the desctop-orientated CMS you can find under localhost:3000/cms. \
 For viewing the SPA we recomend using IPhone 6/7/8 iOS 11 beceause our focus wasnt to get the website responsive

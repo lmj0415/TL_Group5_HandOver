@@ -21,7 +21,7 @@ function FAQGastro(){
                     <div className="FAQ-Content">
                         <div className="FAQ-title" onClick={()=> toggle(i)}>
                             <h2>{faq.question}</h2>
-                            <span>{selected === i ? '˄' : '˅'}</span>
+                            <span>{selected === i ? <i class="fas fa-chevron-up"></i> : <i class="fas fa-chevron-down"></i>}</span>
                         </div>
                         <div className={selected === i ? 'FAQ-text show' : 'FAQ-text'}> {faq.answer}
                         </div>
