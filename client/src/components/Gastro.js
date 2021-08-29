@@ -26,7 +26,7 @@ const Gastro = () => {
                <br/>A small gesture of kindness can help in multiple ways. With a small donation a meal can be shared.</p>
         </div>
 
-        <FAQGastro/>
+        {/* <FAQGastro/> */}
 
         <Link to="/map">
             <div className="Map-Element">    
