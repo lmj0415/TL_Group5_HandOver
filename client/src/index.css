@@ -311,6 +311,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   cursor: pointer;
 }
 
+.Map-Element {
+  margin-top: 20px;
+}
+
 /*----------------------CONTACT FORM---------------------*/
 .Contact {
   background-color: #b0cb37e0;
@@ -438,7 +442,7 @@ form p {
   justify-content: center;
   padding: 20px;
 }
-
+/* 
 .mapBtn {
   position: absolute;
   z-index: 55;
@@ -452,7 +456,7 @@ form p {
   text-decoration: none;
   padding: 10px;
   cursor: pointer;
-}
+} */
 
 .mapBtn_l {
   font-size: 16px;
@@ -559,8 +563,8 @@ form p {
 
 .mapBtn {
   position: absolute;
-  top: 40%;
-  left: 0;
+  top: 80%;
+  left: 2em;
   font-size: 14px;
   font-weight: bold;
   border: none;

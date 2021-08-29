@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react'
 import Intro_Gastro from './Imgs/Cat/Intro_Gastro.jpg'
 import FAQGastro from './FAQs/FAQ-Gastro'
+import {Link} from 'react-router-dom'
+import Map from "./Imgs/Home/Map.jpg"
 
 const Gastro = () => {
     
@@ -25,6 +27,18 @@ const Gastro = () => {
         </div>
 
         <FAQGastro/>
+
+        <Link to="/map">
+            <div className="Map-Element">    
+                <div className="Intro-Module">
+                    <img src={Map} alt="map"/>
+                    <div className="Text-Element story ">
+                        <h1 className="center"> Find all participating partners here.</h1> 
+                    </div>
+                    <button  className="mapBtn">To the locations ❯</button> 
+                </div>
+            </div>
+        </Link>
         
     </div>    
     )

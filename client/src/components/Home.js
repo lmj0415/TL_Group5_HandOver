@@ -65,13 +65,14 @@ const Home = () => {
             </div>
             
             <Link to="/map">
-                <div className="Intro-Module">
-                    <img src={Map} alt="map"/>
-                    <div className="Text-Element story">
-                        <h2 className="center"> Find all participating partners here </h2>  
+                <div className="Map-Element">    
+                    <div className="Intro-Module">
+                        <img src={Map} alt="map"/>
+                        <div className="Text-Element story ">
+                            <h1 className="center"> Find all participating partners here.</h1> 
+                        </div>
                         <button  className="mapBtn">To the locations ❯</button> 
                     </div>
-                   
                 </div>
             </Link>
                 

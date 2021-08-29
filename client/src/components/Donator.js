@@ -1,9 +1,15 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Intro_Donator from './Imgs/Cat/Intro_Donator.jpg'
 import {Link} from 'react-router-dom'
 import Map from "./Imgs/Home/Map.jpg"
+import FAQDonator from './FAQs/FAQ-Donator'
 
 const Donator = () => {
+   
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    })
+   
     return (
      <div className="container">
         <div className="Intro-Module">
@@ -20,7 +26,10 @@ const Donator = () => {
                <br/>A small gesture of kindness can help in multiple ways. With a small donation a meal can be shared.</p>
         </div>
 
+        <FAQDonator/>
+        
         <Link to="/map">
+        <div className="Map-Element">    
                 <div className="Intro-Module">
                     <img src={Map} alt="map"/>
                     <div className="Text-Element story ">
@@ -28,8 +37,9 @@ const Donator = () => {
                     </div>
                     <button  className="mapBtn">To the locations ❯</button> 
                 </div>
-            </Link>
-
+             </div>  
+        </Link>
+        
     </div>    
     )
 }
