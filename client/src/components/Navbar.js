@@ -52,9 +52,9 @@ class Navbar extends React.Component {
             <Menu right isOpen={this.state.menuOpen}
           onStateChange={(state) => this.handleStateChange(state)}>
               <Link id="home" onClick={() => this.closeMenu()}  className="menu-item" to="/">Home</Link>
-              <Link id="needy" onClick={() => this.closeMenu()} className="menu-item" to="/needy">Needy</Link>
+              <Link id="gastro" onClick={() => this.closeMenu()} className="menu-item" to="/gastro">Gastronomist</Link>
               <Link id="donator" onClick={() => this.closeMenu()} className="menu-item" to="/donator">Donator</Link>
-              <Link id="gastro" onClick={() => this.closeMenu()} className="menu-item" to="/gastro">Gastro</Link>
+              <Link id="needy" onClick={() => this.closeMenu()} className="menu-item" to="/needy">Needy</Link>
               <Link id="stories" onClick={() => this.closeMenu()} className="menu-item" to="/stories">Stories</Link>
               <Link id="map" onClick={() => this.closeMenu()} className="menu-item" to="/map">Map</Link>
               <Link id="contact" onClick={() => this.closeMenu()} className="menu-item" to="/contact">Contact</Link>

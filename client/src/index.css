@@ -102,11 +102,6 @@ h4 {
   left: 10px;
 }
 
-/* .Navbar .nav-wrapper .container {
-  overflow: hidden;
-  padding-left: 80px;
-} */
-
 /* -------Position and sizing of burger button---- */
 .bm-burger-button {
   position: absolute;
@@ -169,15 +164,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
   color: #b8b7ad;
   background-color: #373a47;
   padding: 2.5em 2.5em 0;
-
 }
-
-
 
 /* Individual item */
 .bm-item {
   display: inline-block;
-
 }
 
 /* Styling of overlay */
@@ -247,7 +238,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .Brand-Text,
 .SEO-Text {
-  margin: 10px 2em 20px;
+  margin: 30px 2em 20px;
 }
 
 .Target-Groups {
@@ -318,6 +309,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   text-decoration: none;
   margin: 2px 2px;
   cursor: pointer;
+}
+
+.Map-Element {
+  margin-top: 20px;
 }
 
 /*----------------------CONTACT FORM---------------------*/
@@ -447,7 +442,7 @@ form p {
   justify-content: center;
   padding: 20px;
 }
-
+/* 
 .mapBtn {
   position: absolute;
   z-index: 55;
@@ -461,7 +456,7 @@ form p {
   text-decoration: none;
   padding: 10px;
   cursor: pointer;
-}
+} */
 
 .mapBtn_l {
   font-size: 16px;
@@ -568,7 +563,7 @@ form p {
 
 .mapBtn {
   position: absolute;
-  top: 81%;
+  top: 80%;
   left: 2em;
   font-size: 14px;
   font-weight: bold;
