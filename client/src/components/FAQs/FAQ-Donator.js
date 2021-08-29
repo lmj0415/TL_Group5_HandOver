@@ -34,17 +34,22 @@ function FAQDonator(){
 
 
 const data = [
+   
     {
-        question:"Question 1",
-        answer:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. "
+        question:"How can I hand something over?",
+        answer:"If you visit one of our partner restaurants or coffee bars you can say that you like to 'Hand Over' and donate easily in the restaurant while you are ordering something for yourself."
     },
     {
-        question:"Question 2",
-        answer:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. "
+        question:"How do I see if a restaurant is a partner?",
+        answer:"Restaurants and coffee bars who are part of the Hand Over Community have a display in their window and on their counter which identifies them as a official partner. You will also find them marked in our Map, which you find linked below."
     },
     {
-        question:"Question 3",
-        answer:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. "
+        question:"Where can I find participating restaurants or coffee bars?",
+        answer:"You will find them marked in our Map, which you find linked below. They also promote their partnership by presenting the HAnd Over display in their store windows and on their counters. "
+    },
+    {
+        question:"Do I have to donate a whole meal?",
+        answer:"It is up to you if you want to donate for a whole meal or if you just want to donate a certain amount."
     }
 ]
 

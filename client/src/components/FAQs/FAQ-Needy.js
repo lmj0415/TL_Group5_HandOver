@@ -35,16 +35,20 @@ function FAQNeedy(){
 
 const data = [
     {
-        question:"Question 1",
+        question:"When am I qualified to profit from Hand Over?",
+        answer:"Anyone whos family relies on government assistance, who is homeless or has a small pension and therefore cannot afford something from a coffee bar or restaurant. "
+    },
+    {
+        question:"How much can I get?",
+        answer:"You can get one coffee or meal per person and day."
+    },
+    {
+        question:"Where can I find participating restaurants or coffee bars?",
         answer:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. "
     },
     {
-        question:"Question 2",
-        answer:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. "
-    },
-    {
-        question:"Question 3",
-        answer:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. "
+        question:"How do I see if a restaurant is a partner?",
+        answer:"Restaurants and coffee bars who are part of the Hand Over Community have a display in their window and on their counter which identifies them as a official partner. You will also find them marked in our Map, which you find linked below."
     }
 ]
 

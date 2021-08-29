@@ -21,9 +21,9 @@ const Needy = () => {
         </div>
 
         <div className="Brand-Text">
-            <h3>Together we are better. <br/>Let's enrich social life.</h3>
-            <p>Fate is not always kind. Some of us have to face difficulties in their lives which are sometimes hart to overcome. Therefore not all of us are able to participate in social life due to low income levels or other challenges. 
-               <br/>A small gesture of kindness can help in multiple ways. With a small donation a meal can be shared.</p>
+            <h3>Together we are better.</h3>
+            <p>Fate is not always kind. Some have to face difficulties in live which are sometimes hart to overcome. Therefore not all of us are able to participate in social life due to low income levels or other challenges. 
+               <br/>Thanks to our community we can hand you a coffee or meal for free.</p>
         </div>
 
         <FAQNeedy/>
@@ -33,7 +33,7 @@ const Needy = () => {
                 <div className="Intro-Module">
                     <img src={Map} alt="map"/>
                     <div className="Text-Element story ">
-                        <h1 className="center"> Find all participating partners here.</h1> 
+                        <h1 className="center"> Find all participating partners here</h1> 
                     </div>
                     <button  className="mapBtn">To the locations ❯</button> 
                 </div>

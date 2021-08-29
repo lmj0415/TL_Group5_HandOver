@@ -8,11 +8,7 @@
   font-size: 1.01em;
 }
 
-.container .Brand-Text ul,
-.container .Brand-Text li {
-  list-style-type: disc;
-}
-
+/* the handwritten font was never used but kept due to possible use for later */
 .handwritten {
   font-family: "Shadows Into Light";
 }
@@ -216,7 +212,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .Text-Element .italic {
   padding-left: 5px;
   padding-top: 5px;
-  padding-right: 50px;
   margin-bottom: 2px;
   text-align: left;
   font-weight: normal;
@@ -313,6 +308,32 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .Map-Element {
   margin-top: 20px;
+}
+
+/*----------------------ABOUT US---------------------*/
+
+.About-Us li {
+  padding-bottom: 1em;
+  margin: 0 1em;
+}
+
+.About-Us h4 {
+  font-size: 1.2em;
+  margin: 0 20px 0 85px;
+}
+.About-Us p {
+  margin-top: 0.3em;
+  margin-left: 85px;
+  margin-right: 2.5em;
+}
+.About-Imgs {
+  width: 70px;
+  height: auto;
+  position: absolute;
+}
+.About h3 {
+  margin-left: 0.8em;
+  margin-bottom: 1em;
 }
 
 /*----------------------CONTACT FORM---------------------*/
