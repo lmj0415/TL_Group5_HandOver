@@ -35,16 +35,24 @@ function FAQGastro(){
 
 const data = [
     {
-        question:"Question 1",
-        answer:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. "
+        question:"How can I register? ",
+        answer:"You want to become a partner? Please use the contact form to get in touch with us and mention your interest in becoming a partner with your location."
     },
     {
-        question:"Question 2",
-        answer:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. "
+        question:"What are the next steps?",
+        answer:"After we got your message we will get back to you and offer you a link where you can download all print materials and other documents you will need for your restuarant or coffee bar. "
     },
     {
-        question:"Question 3",
-        answer:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. "
+        question:"What else do I have to do? ",
+        answer:"Please print the material we will send to you after registration and expose in your store so that your customers will notice it. "
+    },
+    {
+        question:"How does it work? ",
+        answer:"With the print material your customers will notice that you are part of the Hand Over Community. People who want to hand over a small donation, coffee or a whole meal can do so by mentioning it. Please collect those donations and use the display which informs that there are free meals or coffees available.<br/> If people in need appear you can hand it over."
+    },
+    {
+        question:"Do I get support if needed? ",
+        answer:"We will always be there for you. Please reach out to us via the contact form or via phone. Our number will be send to you after your registration. "
     }
 ]
 

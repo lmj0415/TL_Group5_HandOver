@@ -15,15 +15,15 @@ const Donator = () => {
         <div className="Intro-Module">
             <img src={Intro_Donator} alt="Homeless man on the streets"/>
             <div className="Text-Element">
-                <h1 className="center">You do care and you are willing to help? </h1> 
-                <p className="italic">You are </p>
+                <h1 className="center">Donators</h1> 
+                <p className="italic">You do care and you are willing to help? That is amazing! Let us explain to you where and how you find the Hand Over partners. </p>
             </div>  
         </div>
 
         <div className="Brand-Text">
             <h3>Together we are better. <br/>Let's enrich social life.</h3>
-            <p>Fate is not always kind. Some of us have to face difficulties in their lives which are sometimes hart to overcome. Therefore not all of us are able to participate in social life due to low income levels or other challenges. 
-               <br/>A small gesture of kindness can help in multiple ways. With a small donation a meal can be shared.</p>
+            <p>Fate is not always kind. Some of us have to face difficulties in live which are sometimes hart to overcome. Therefore not all of us are able to participate in social life due to low income levels or other challenges. 
+               <br/>A small gesture of kindness can help in multiple ways. With a small donation a meal can be handed over to those in need.</p>
         </div>
 
         <FAQDonator/>
