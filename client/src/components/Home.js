@@ -55,15 +55,13 @@ const Home = () => {
 
             <div className="SEO-Text">
                 <h3>What does 'Hand Over' mean to our community? </h3>
-                <p>Learn more about Sven, Jaqueline, Burghardt and other participating people. They shared their stories with us to provide insight into their life and history. </p>
+                <p>Learn more about the stories of Sven, Jaqueline, Burghardt and other community members. They shared their stories with us to provide insight into their life and history. </p>
             </div>
 
             <StorySlider/>
-
             <div className="SEO-Text">
-                <h3>You want to know where to find us?.</h3>
-                <p>Fate is not always kind. Some of us have to face difficulties in their lives which are sometimes hart to overcome. Therefore not all of us are able to participate in social life due to low income levels or other challenges. 
-                   <br/>A small gesture of kindness can help in multiple ways. With a small donation a meal can be shared.</p>
+                <h3>You want to know where to find us?</h3>
+                <p>In the below linked map you will find all participating restaurants and coffee bars in Hamburg, Berlin and Munich. With a click on the marked spots you will get further details including their address and opening hours.</p>
             </div>
             
             <Link to="/map">
