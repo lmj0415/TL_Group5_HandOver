@@ -1,8 +1,13 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Intro_Gastro from './Imgs/Cat/Intro_Gastro.jpg'
 import FAQGastro from './FAQs/FAQ-Gastro'
 
 const Gastro = () => {
+    
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    })
+
     return (
      <div className="container">
         <div className="Intro-Module">
