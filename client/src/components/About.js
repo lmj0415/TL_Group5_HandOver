@@ -1,10 +1,15 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Intro_Donator from './Imgs/Cat/Intro_Donator.jpg'
 import Lasse from './Imgs/Team/Lasse.png'
 import Nadine from './Imgs/Team/Nadine.png'
 import Marian from './Imgs/Team/Marian.png'
 
 const About = (props) => {
+   
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    })
+   
     return (
         <div className="container">
             <div className="Intro-Module">

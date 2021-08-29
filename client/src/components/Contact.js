@@ -9,6 +9,7 @@ const Contact = () => {
     let confirmation
 
     useEffect(() => {
+        window.scrollTo(0,0)
         setError()
         return
     }, []) // eslint-disable-line react-hooks/exhaustive-deps
@@ -16,6 +17,7 @@ const Contact = () => {
     if (error !== "") {
             confirmation =  <p>{error}</p> 
     }
+
 
     return (
         <div className="Contact">

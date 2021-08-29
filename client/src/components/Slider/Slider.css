@@ -60,7 +60,6 @@
   margin-left: 10px;
 }
 
-
 .container-slider-img .active-anim {
   opacity: 1;
   width: 75%;
@@ -116,7 +115,8 @@
   height: 100%;
   object-fit: cover;
 }
-.active-anim {
+.active-anim,
+.next-active-anim {
   transform: scale(1);
 }
 
