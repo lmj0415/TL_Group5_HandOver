@@ -25,14 +25,14 @@ const Contact = () => {
             subheading= "If you want more Information"
             heading= {"Contact us now!"}/>
             <form>
-                <label className="ipt">Last & first name
-                    <input className="ipt" name="author" placeholder="Name" value={message.author} onChange={handleChange}></input></label>
-                <label className="ipt">Mail address
-                    <input className="ipt" name="email" placeholder="E-Mail" value={message.email} onChange={handleChange}></input></label>
-                <label className="ipt">Subject
-                    <input className="ipt" name="betreff"  placeholder="Subject" value={message.betreff} onChange={handleChange}></input></label>
-                <label className="ipt">Your message
-                    <textarea className="ipt" name="message" placeholder="Message" value={message.message} onChange={handleChange}></textarea></label>
+                <label className="ipt">Last & first name</label>
+                    <input className="ipt" name="author" placeholder="Name" value={message.author} onChange={handleChange}></input>
+                <label className="ipt">Mail address</label>
+                    <input className="ipt" name="email" placeholder="E-Mail" value={message.email} onChange={handleChange}></input>
+                <label className="ipt">Subject</label>
+                    <input className="ipt" name="betreff"  placeholder="Subject" value={message.betreff} onChange={handleChange}></input>
+                <label className="ipt">Your message</label>
+                    <textarea className="ipt" name="message" placeholder="Message" value={message.message} onChange={handleChange}></textarea>
                 <input type="submit" name="submit" className="btn" onClick={submitMessage} value="Send ❯" ></input>
              {confirmation}
              </form>

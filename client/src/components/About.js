@@ -35,8 +35,8 @@ const About = (props) => {
                     </li>
                     <li>
                         <img className="About-Imgs" src={Marian} alt=""/>
-                        <h4 className="About-Text">Marian Gajda</h4>
-                        <p className="About-Text">Professional techie and the most amazing mentor.</p>
+                        <h4 className="About-Text">Marian P. Gajda</h4>
+                        <p className="About-Text">Web-/App-Developer, teacher and the most amazing mentor.</p>
                     </li>
                 </ul>
             </div>
