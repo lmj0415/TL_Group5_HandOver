@@ -69,9 +69,10 @@ const Home = () => {
                 <div className="Intro-Module">
                     <img src={Map} alt="map"/>
                     <div className="Text-Element story">
-                        <h2 className="center"> Find all participating partners here </h2> 
+                        <h2 className="center"> Find all participating partners here </h2>  
+                        <button  className="mapBtn">To the locations ❯</button> 
                     </div>
-                    <button  className="mapBtn">To the locations ❯</button> 
+                   
                 </div>
             </Link>
                 
