@@ -8,6 +8,11 @@
   font-size: 1.01em;
 }
 
+.container .Brand-Text ul,
+.container .Brand-Text li {
+  list-style-type: disc;
+}
+
 .handwritten {
   font-family: "Shadows Into Light";
 }

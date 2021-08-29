@@ -12,6 +12,7 @@ import Stories from './components/Stories/Stories'
 import Story from './components/Stories/Story'
 import FourOFour from './components/404'
 import Map from './components/Map'
+import About from './components/About'
 
 import { StoryContextProvider } from './Context/StoriesContext'
 import { ContactProvider } from './Context/ContactContext'
@@ -56,6 +57,9 @@ function App() {
               <ContactProvider>
                 <Contact />
               </ContactProvider>
+            </Route>
+            <Route path='/about'>
+                <About />
             </Route>
             <Route path='/map'>
               <MapContextProvider>
