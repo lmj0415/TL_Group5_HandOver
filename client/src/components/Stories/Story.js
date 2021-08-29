@@ -6,6 +6,7 @@ export default function Story() {
     const { storyData, setLoading, getStoryData } = useStoryContext()
     
     useEffect(() => {
+        window.scrollTo(0,0)
         setLoading(true)
         let href = window.location.href
         const id =href.substr(href.lastIndexOf("/") + 1)

@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from "uuid";
+// import { v4 as uuidv4 } from "uuid";
 
 const dataSlider = [
   {
@@ -25,7 +25,7 @@ const dataSlider = [
     id: "story3",
     name:"Burghardt",
     title: "A simple gesture brings hope.",
-    subTitle: "I worked my whole live but never earned a fortune. Since I retired I have even less.",
+    subTitle: "I worked my whole live but never earned a fortune. Since I retired I have even less. But now I am finally able to participate in social life again. I can go with my grandchildren to a restaurant and they do not always have to invite me. I do not feel excluded from life anymore. I am so grateful that Hand Over is supporting me without any bureaucratic effort. It is an easy concept which is easily accessible and understandable even for older people like me. ",
     story: "Post sth. Lorem ipsum dolar",
     CTA: "Read more ❯",
     link:"/story3",

@@ -26,14 +26,14 @@ const Gastro = () => {
                <br/>By offering Hand Over in your coffee bar or restaurant your can contribute to the common good. </p>
         </div>
 
-        <FAQGastro/>
+        {/* <FAQGastro/> */}
 
         <Link to="/map">
             <div className="Map-Element">    
                 <div className="Intro-Module">
                     <img src={Map} alt="map"/>
                     <div className="Text-Element story ">
-                        <h1 className="center"> Find all participating partners here.</h1> 
+                        <h1 className="center"> Find all participating partners here</h1> 
                     </div>
                     <button  className="mapBtn">To the locations ❯</button> 
                 </div>
